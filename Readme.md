@@ -1,6 +1,6 @@
 # Projeto Mobile
-> ## IADE - Engenharia Informática
-> ### Team
+## IADE - Engenharia Informática
+### 1. Equipa
 | Membro| Número de Estudante|
 |---|---|
 | André Maleitas | 20251381 |
@@ -8,47 +8,109 @@
 | Henrique Metelo | 20252138 |
 | Leandro Santos | 20252147 |
 
-## Keywords
+---
 
-## Descrição da app
+## 2. Keywords
 
-O presente projeto consiste no desenvolvimento de uma aplicação orientada para a gestão e partilha de receitas culinárias, combinando funcionalidades de interação comunitária com ferramentas de apoio à decisão de compra.
+---
 
-A aplicação foi concebida para permitir a criação, catalogação e armazenamento personalizado de receitas, conferindo a cada utilizador a possibilidade de definir a visibilidade dos seus conteúdos através de controlos de privacidade.
+## 3. Descrição da app
+
+O presente projeto consiste no desenvolvimento de uma aplicação orientada para a gestão e partilha de **receitas culinárias**, combinando funcionalidades de interação comunitária com ferramentas de apoio à decisão de compra.
+
+A aplicação foi concebida para permitir a **criação, catalogação e armazenamento personalizado de receitas**, conferindo a cada utilizador a possibilidade de definir a visibilidade dos seus conteúdos através de controlos de privacidade.
 
 No que concerne à vertente social e de interação, o sistema integrará um módulo de gestão de perfis individuais, permitindo explorar receitas publicadas pela comunidade e registar reações a outros conteúdos.
 
 Adicionalmente, a solução incorpora um serviço de geolocalização com mapeamento de superfícies comerciais e a monitorização dos respetivos preços de produtos. Esta componente viabiliza a implementação de um comparador de preços de ingredientes entre diferentes estabelecimentos, capacitando os utilizadores a otimizar o custo das suas refeições de forma prática e informada.
 
-## Publico Alvo
+---
 
-## Pesquisa de mercado
+## 4. Publico Alvo
 
-## Versao Preliminar
+---
 
-### Descriçao generica da soluçao a apresentar 
+## 5. Pesquisa de mercado
 
-### Enquadramento nas UCs
+---
 
-#### Base de dados
+## 6. Versao Preliminar
 
-#### Programação de dispositivos moveis
+**1º Guiao** - ***Funcionalidade Core*** - Inserir uma receita na aplicaçao
 
-#### Redes e Comunicações de Dados
+**Objetivo** - O Utilizador Criar uma nova receita no seu perfil
 
-### Requisitos tecnicos
+**Ator** - Utilizador Autenticado
 
-### Arquitetura provisoria
+**pré requisitos** - o utilizador **precisa de ter uma conta e estar autenticado**
+ - 1. O Utilizador acede ao ecrã inicial e carrega "Criar nova receita".
+ - 2. O sistema abre um novo ecrã para o utilizador escolher os ingredientes.
+ - 3. O sistema abre um novo ecrã para o utilizador escrever passo a passo a receita.
+ - 4. Por fim abre um novo ecrã para o utilizador dar detalhes a receita(nome, tempo, dieta, privacidade, imagens ou videos)
+ - 5. O utilizador carrega no botão "criar"
+ - 6. O sistema da uma mensagem de confirmação da criação
+---
 
-### Tecnologias provisorias
+## 7. Motivação e Identificação do Problema
 
-## planeamento e calendarização
+No contexto socioeconómico atual, a gestão do orçamento e dos recursos domésticos constitui um desafio diário para a maioria das famílias. Este projeto aborda diretamente três problemáticas centrais:
+
+* **Gestão Ineficiente de Ingredientes e Desperdício Alimentar:** A ausência de um planeamento estruturado das refeições conduz frequentemente à aquisição redundante de produtos e ao posterior descarte de alimentos não consumidos dentro do prazo de validade, agravando o desperdício doméstico.
+* **Pressão Financeira e Dispersão de Preços:** O aumento generalizado dos bens essenciais exige uma monitorização cuidada dos gastos. Contudo, a opacidade e a constante variação de preços entre diferentes cadeias de distribuição tornam a procura pelas opções mais económicas uma tarefa complexa e morosa para o consumidor.
+* **Monotonia Alimentar e Falta de Inspiração:** O ritmo quotidiano restringe frequentemente o tempo dedicado à conceção de ementas variadas e equilibradas, resultando na repetição sistemática das mesmas refeições ou no recurso a soluções pré-confecionadas, menos saudáveis e mais dispendiosas.
+
+---
+
+## 8. Proposta de Valor e Objetivos
+
+Como resposta a estes desafios, a plataforma consolida uma abordagem integrada assente em três vetores estratégicos:
+
+1. **Otimização da Economia Doméstica:** Apoiar ativamente as famílias na redução das despesas correntes, identificando as superfícies comerciais mais vantajosas para a aquisição do conjunto exato de ingredientes exigidos por cada refeição.
+2. **Sustentabilidade e Gestão Racional:** Fomentar o aproveitamento consciente dos recursos alimentares disponíveis no domicílio, minimizando compras desnecessárias e combatendo o desperdício.
+3. **Inovação e Inspiração Culinária:** Disponibilizar uma base de conhecimento colaborativa e dinâmica que estimula a experimentação gastronómica, simplificando o processo de planeamento semanal através de sugestões adaptadas às preferências e ao orçamento de cada utilizador.
+
+---
+
+### 9. Enquadramento nas UCs
+
+| UC | Professor |  |
+|---|---|---|
+| Projeto de Desenvolvimento Móvel| Fábio Silva | Planeamento e desenvolvimento do projeto |
+|Base de Dados| Miguel Boavida | Criaçao e utilização da base de dados |
+|Programação de Dispositivos Móveis| João Monge | Desenvolvimento da Interface na aplicação móvel |
+| Redes e Comunicação de Dados| Nathan Campos | Desenvolvimento do Back-end da aplicação |
+
+---
+
+### 10. Requisitos tecnicos
+
+---
+
+### 11. Arquitetura provisoria
+---
+
+### 12. Tecnologias provisorias
+
+| Função | Tecnologia |
+|---|---|
+| aplicaçao mobile | flutter, dart |
+| Back-end ||
+| Base de Dados | MySql, MAMP |
+
+![Flutter](https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=white) ![Dart](https://img.shields.io/badge/Dart-0175C2?logo=dart&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white) ![MAMP](https://img.shields.io/badge/MAMP-02749C?logo=mamp&logoColor=white)
+---
+
+## 13. planeamento e calendarização
 
 | Entrega | Data | Conteúdo |
 |---|---|---|
 | Primeira Entrega | 02 October 2026 | Relatorio da proposta do projeto, Mockups, Requisitos |
 | Segunda Entrega | 6 Novembro 2026 | Prototipo funcional com BD e servidor, Relatorio atualizado |
 | Terceira Entrega | 11 Dezembro 2026 | Versão final do projeto, relatorio e suportes visuais |
-## Conclusao
+
+---
+## 14. Conclusao
+
+---
 
 ## bibliografia
