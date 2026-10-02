@@ -28,6 +28,7 @@ Adicionalmente, a solução incorpora um serviço de geolocalização com mapeam
 
 ## 4. Publico Alvo
 Pessoas entre os 35 e os 50 anos com interesse em cozinha.
+
 ---
 
 ## 5. Pesquisa de mercado
