@@ -79,10 +79,24 @@ Como resposta a estes desafios, a plataforma consolida uma abordagem integrada a
 |Base de Dados| Miguel Boavida | Criaçao e utilização da base de dados |
 |Programação de Dispositivos Móveis| João Monge | Desenvolvimento da Interface na aplicação móvel |
 | Redes e Comunicação de Dados| Nathan Campos | Desenvolvimento do Back-end da aplicação |
+|Matematica Discreta| André Torcato | Analise de dados com conceitos Matemáticos |
 
 ---
 
 ### 10. Requisitos tecnicos
+#### Funcionais
+- O sistema deve permitir a criação de contas de utilizador com autenticação segura.
+- O sistema deve permitir a criação, edição e eliminação de receitas culinárias.
+- O sistema deve permitir a pesquisa e filtragem de receitas com base em critérios como ingredientes, tempo de preparação e tipo de dieta.
+- O sistema deve permitir a partilha de receitas com outros utilizadores ou manter receitas privadas.
+- O sistema deve utilizar uma API para obter informações sobre preços de produtos em diferentes lojas.
+- O sistema deve utilizar uma base de dados para armazenar informações sobre utilizadores, receitas e preços de produtos.
+- O sistema deve permitir os utilizadores a dar feedback sobre as receitas, incluindo avaliações, comentários, likes e favoritos.
+
+
+#### Não Funcionais
+- O sistema deve ser responsivo e compatível com diferentes dispositivos móveis.
+- O sistema deve garantir a segurança dos dados do utilizador, incluindo informações pessoais e receitas.
 
 ---
 
