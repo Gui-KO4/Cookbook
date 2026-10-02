@@ -27,7 +27,11 @@ Adicionalmente, a solução incorpora um serviço de geolocalização com mapeam
 ---
 
 ## 4. Publico Alvo
-A aplicação Cookbook destina-se a pessoas com idades compreendidas maioritariamente entre os 35 e os 50 anos com interesse em cozinha.
+A aplicação Cookbook destina-se a um público diversificado, desde entusiastas da culinária até pessoas que procuram otimizar a gestão doméstica e financeira. O público-alvo inclui:
+
+- **Famílias e pessoas com interesse na culinária:** Pessoas que desejam explorar novas receitas, partilhar experiências culinárias e interagir com uma comunidade de entusiastas;
+
+- **Individuos preocupados com a gestão financeira doméstica:** Utilizadores que procuram otimizar os custos das suas refeições, comparando os preços dos ingredientes em diferentes estabelecimentos.
 
 ---
 
