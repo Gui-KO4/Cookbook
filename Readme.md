@@ -27,10 +27,18 @@ Adicionalmente, a solução incorpora um serviço de geolocalização com mapeam
 ---
 
 ## 4. Publico Alvo
+Pessoas entre os 35 e os 50 anos com interesse em cozinha.
 
 ---
 
 ## 5. Pesquisa de mercado
+Atualmente existem várias aplicações de gestão de receitas que se aproximam da solução proposta, nomeadamente a Paprika, Cookpad, Crouton, Cookidoo e Tasty. Embora cada uma tenha pontos fortes, a análise destas soluções permitiu identificar problemas comuns:
+
+Interface pouco intuitiva: várias das aplicações analisadas apresentam uma UI bastante arcaica o que dificulta a utilização, sobretudo pelos utilizadores que temos definidos como publico-alvo.
+Ausência de interação comunitária: a generalidade das aplicações carece de mecanismos sociais, como perfis, partilha e reações a conteúdos de outros utilizadores e a habilidade de "seguir" os mesmos.
+Inexistência de apoio à decisão de compra: nenhuma das aplicações analisadas integra a comparação de preços de ingredientes entre estabelecimentos, o que impede o utilizador de otimizar o custo das suas refeições.
+
+A aplicação Cookbook procura preencher estas lacunas com uma interface intuitiva,com uma vertente social ativa e uma ferramenta de comparação de preços, posicionando-se assim como uma alternativa mais completa as outras aplicações no mercado e adaptada às necessidades dos seus utilizadores.
 
 ---
 
