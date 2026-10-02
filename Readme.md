@@ -120,7 +120,7 @@ Como resposta a estes desafios, a plataforma consolida uma abordagem integrada a
 | Função | Tecnologia |
 |---|---|
 | aplicaçao mobile | flutter, dart |
-| Back-end ||
+| Back-end | nodejs, javascript |
 | Base de Dados | MySql, MAMP |
 
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=white) ![Dart](https://img.shields.io/badge/Dart-0175C2?logo=dart&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white) ![MAMP](https://img.shields.io/badge/MAMP-02749C?logo=mamp&logoColor=white)
