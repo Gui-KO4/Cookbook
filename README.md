@@ -25,3 +25,6 @@ Este projeto encontra-se em fase de planeamento com o fim de desenvolvimento pre
 |---|---|
 |[Memoria descritiva](01_Memoria_Descritiva/memoria.md) |  |
 | [Info](00_Identificacao/info.md) ||
+
+--- 
+| [Proposta de Projeto](04_Documentacao_Tecnica/g03-proposta-v1.md) | Primeira versão da proposta (Entrega 1) |
