@@ -27,16 +27,14 @@ A aplicação foi concebida para permitir a **criação, catalogação e armazen
 
 No que concerne à vertente social e de interação, o sistema integrará um módulo de gestão de perfis individuais, permitindo explorar receitas publicadas pela comunidade e registar reações a outros conteúdos.
 
-Adicionalmente, a solução incorpora um serviço de geolocalização com mapeamento de superfícies comerciais e a monitorização dos respetivos preços de produtos. 
+Adicionalmente, a solução incorpora um serviço de geolocalização com mapeamento de superfícies comerciais. 
 
 ---
 
 ## 4. Publico Alvo
-A aplicação Cookbook destina-se a um público diversificado, desde entusiastas da culinária até pessoas que procuram otimizar a gestão doméstica e financeira. O público-alvo inclui:
+A aplicação Cookbook destina-se a um público diversificado, com diferentes níveis de experiência culinária, interessado em explorar, partilhar e interagir com receitas. O público-alvo inclui:
 
-- **Famílias e pessoas com interesse na culinária:** Pessoas que desejam explorar novas receitas, partilhar experiências culinárias e interagir com uma comunidade de entusiastas;
-
-- **Individuos preocupados com a gestão financeira doméstica:** Utilizadores que procuram otimizar os custos das suas refeições, comparando os preços dos ingredientes em diferentes estabelecimentos.
+- **Famílias e pessoas com interesse na culinária:** Pessoas que desejam explorar novas receitas, partilhar experiências culinárias e interagir com uma comunidade de entusiastas. 
 
 ---
 
@@ -45,9 +43,10 @@ Atualmente existem várias aplicações de gestão de receitas que se aproximam 
 
 Interface pouco intuitiva: várias das aplicações analisadas apresentam uma UI bastante arcaica o que dificulta a utilização, sobretudo pelos utilizadores que temos definidos como publico-alvo.
 Ausência de interação comunitária: a generalidade das aplicações carece de mecanismos sociais, como perfis, partilha e reações a conteúdos de outros utilizadores e a habilidade de "seguir" os mesmos.
-Inexistência de apoio à decisão de compra: nenhuma das aplicações analisadas integra a comparação de preços de ingredientes entre estabelecimentos, o que impede o utilizador de otimizar o custo das suas refeições.
 
-A aplicação Cookbook procura preencher estas lacunas com uma interface intuitiva,com uma vertente social ativa e uma ferramenta de comparação de preços, posicionando-se assim como uma alternativa mais completa as outras aplicações no mercado e adaptada às necessidades dos seus utilizadores.
+A aplicação Cookbook visa preencher estas lacunas, oferecendo uma interface intuitiva e uma componente social ativa, através de uma comunidade amigável e interativa. Esta permite aos utilizadores partilhar receitas e reagir aos conteúdos de outros utilizadores, proporcionando uma experiência mais rica e envolvente.
+
+A componente social da aplicação distingue-nos da concorrência.
 
 ---
 
@@ -103,7 +102,6 @@ A aplicação Cookbook procura preencher estas lacunas com uma interface intuiti
 No contexto socioeconómico atual, a gestão do orçamento e dos recursos domésticos constitui um desafio diário para a maioria das famílias. Este projeto aborda diretamente três problemáticas centrais:
 
 * **Gestão Ineficiente de Ingredientes e Desperdício Alimentar:** A ausência de um planeamento estruturado das refeições conduz frequentemente à aquisição redundante de produtos e ao posterior descarte de alimentos não consumidos dentro do prazo de validade, agravando o desperdício doméstico.
-* **Pressão Financeira e Dispersão de Preços:** O aumento generalizado dos bens essenciais exige uma monitorização cuidada dos gastos. Contudo, a opacidade e a constante variação de preços entre diferentes cadeias de distribuição tornam a procura pelas opções mais económicas uma tarefa complexa e morosa para o consumidor.
 * **Monotonia Alimentar e Falta de Inspiração:** O ritmo quotidiano restringe frequentemente o tempo dedicado à conceção de ementas variadas e equilibradas, resultando na repetição sistemática das mesmas refeições ou no recurso a soluções pré-confecionadas, menos saudáveis e mais dispendiosas.
 
 ---
@@ -137,7 +135,7 @@ Como resposta a estes desafios, a plataforma consolida uma abordagem integrada a
 - O sistema deve permitir a pesquisa e filtragem de receitas com base em critérios como ingredientes, tempo de preparação e tipo de dieta.
 - O sistema deve permitir a partilha de receitas com outros utilizadores ou manter receitas privadas.
 - O sistema deve utilizar uma API para obter informações sobre lojas perto do utilizador com um mapa para melhor visualização.
-- O sistema deve utilizar uma base de dados para armazenar informações sobre utilizadores, receitas e preços de produtos.
+- O sistema deve utilizar uma base de dados para armazenar informações sobre utilizadores e receitas.
 - O sistema deve permitir os utilizadores a dar feedback sobre as receitas, incluindo avaliações, comentários, likes e favoritos.
 
 
@@ -148,6 +146,14 @@ Como resposta a estes desafios, a plataforma consolida uma abordagem integrada a
 ---
 
 ### 11. Arquitetura provisoria
+A arquitetura do sistema baseia-se numa abordagem cliente-servidor, em que a aplicação móvel (cliente) comunica com um servidor back-end para processar pedidos e gerir dados. A base de dados servirá para armazenar informações sobre utilizadores e receitas.
+
+Para a comunicação entre o cliente e o servidor será utilizada a REST API, garantindo uma troca de dados eficiente e segura. A aplicação móvel será desenvolvida com Flutter, na linguagem Dart, o que permitirá a criação de interfaces nativas para diferentes plataformas móveis.
+
+Será utilizada a estrutura MVC (Model-View-Controller) para organizar o código, facilitando a sua compreensão e escrita, ao separar a lógica de negócio, a interface do utilizador e o controlo de fluxo da aplicação.
+
+O Node.js será utilizado para o desenvolvimento do servidor back-end. A base de dados MySQL será utilizada para armazenar informações estruturadas, garantindo a integridade e a consistência dos dados.
+
 ---
 
 ### 12. Tecnologias provisorias
