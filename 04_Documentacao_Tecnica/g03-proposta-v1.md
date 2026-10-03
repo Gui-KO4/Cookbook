@@ -156,6 +156,10 @@ Será utilizada a estrutura MVC (Model-View-Controller) para organizar o código
 
 O Node.js será utilizado para o desenvolvimento do servidor back-end. A base de dados MySQL será utilizada para armazenar informações estruturadas, garantindo a integridade e a consistência dos dados.
 
+### Modelo de Dominio
+
+![Modelo de Dominio](/02_Imagens/ModeloDominio_Cookbook.png)
+
 ---
 
 ## 12. Tecnologias provisorias
