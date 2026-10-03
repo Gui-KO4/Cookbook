@@ -11,6 +11,11 @@
 ---
 
 ## 2. Keywords
+- Aplicação
+- Mobile
+- Receitas
+- Culinária
+- Gestão
 
 ---
 
@@ -131,7 +136,7 @@ Como resposta a estes desafios, a plataforma consolida uma abordagem integrada a
 - O sistema deve permitir a criação, edição e eliminação de receitas culinárias.
 - O sistema deve permitir a pesquisa e filtragem de receitas com base em critérios como ingredientes, tempo de preparação e tipo de dieta.
 - O sistema deve permitir a partilha de receitas com outros utilizadores ou manter receitas privadas.
-- O sistema deve utilizar uma API para obter informações sobre preços de produtos em diferentes lojas.
+- O sistema deve utilizar uma API para obter informações sobre lojas perto do utilizador com um mapa para melhor visualização.
 - O sistema deve utilizar uma base de dados para armazenar informações sobre utilizadores, receitas e preços de produtos.
 - O sistema deve permitir os utilizadores a dar feedback sobre as receitas, incluindo avaliações, comentários, likes e favoritos.
 
