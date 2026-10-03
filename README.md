@@ -1,6 +1,6 @@
 <p align="center">
   <picture>
-    <img src=".github/assets/CookBook_mainlogo.png" alt="CookBook" width="420">
+    <img src=".github/assets/CookBook_mainlogo.png" alt="CookBook" width="240">
   </picture>
 </p>
 
