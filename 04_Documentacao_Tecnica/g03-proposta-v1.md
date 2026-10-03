@@ -178,8 +178,28 @@ O Node.js será utilizado para o desenvolvimento do servidor back-end. A base de
 | Terceira Entrega | 11 Dezembro 2026 | Versão final do projeto, relatorio e suportes visuais |
 
 ---
-## 14. Conclusao
-Esta componente viabiliza a implementação de um comparador de preços de ingredientes entre diferentes estabelecimentos, capacitando os utilizadores a otimizar o custo das suas refeições de forma prática e informada.
+## 14. Conclusão
+
+O projeto Cookbook estabelece uma resposta prática e intuitiva aos desafios da organização alimentar diária, abordando problemáticas como a gestão ineficiente de ingredientes, o desperdício doméstico e a falta de inspiração gastronómica. Ao superar as limitações identificadas nas aplicações concorrentes — nomeadamente as interfaces pouco acessíveis e a escassez de mecanismos de interação social —, a aplicação posiciona-se como uma plataforma colaborativa que valoriza a partilha comunitária e a catalogação personalizada de receitas.
+
+A integração de ferramentas para a criação, organização e partilha de receitas com controlo de privacidade, complementada por serviços de geolocalização para o mapeamento de superfícies comerciais próximas, constitui o núcleo da proposta de valor da solução. Este ecossistema foi pensado para incentivar hábitos alimentares mais variados e sustentáveis, promovendo o aproveitamento integral dos recursos disponíveis e a troca de experiências culinárias entre os utilizadores.
+
+Com a conclusão desta etapa preliminar de planeamento, ficam consolidados o levantamento de requisitos, os guiões de utilização, a especificação da arquitetura cliente-servidor (Flutter, Node.js e MySQL) e a calendarização dos trabalhos. A equipa direciona agora os esforços para a fase de implementação, focando-se na modelação da base de dados relacional, no desenvolvimento dos serviços REST e na prototipagem funcional das interfaces com vista à próxima fase de avaliação.
+
+Adicionalmente, ao longo do ciclo de desenvolvimento do projeto, a equipa pretende ter a oportunidade de investigar e implementar um comparador de preços de ingredientes entre diferentes estabelecimentos comerciais. Esta funcionalidade tem como propósito capacitar os utilizadores a otimizar o custo das suas refeições de forma prática e informada, constituindo uma vertente diferenciadora e de elevado valor técnico que enriquecerá a experiência da aplicação, aprofundando a exploração de APIs externas e a análise comparativa de dados.
 ---
 
 ## bibliografia
+
+### Tecnologias e Plataformas
+* **Dart Dev.** (s.d.). *Dart programming language documentation*. Recuperado de https://dart.dev/guides
+* **Flutter Dev.** (s.d.). *Flutter documentation: Beautiful native apps in record time*. Google. Recuperado de https://docs.flutter.dev/
+* **GitHub.** (s.d.). *GitHub Projects documentation: Planning and tracking work*. Recuperado de https://docs.github.com/en/issues/planning-and-tracking-with-projects
+* **MySQL.** (2024). *MySQL 8.0 Reference Manual*. Oracle Corporation. Recuperado de https://dev.mysql.com/doc/refman/8.0/en/
+* **Node.js.** (s.d.). *Node.js documentation & API reference*. OpenJS Foundation. Recuperado de https://nodejs.org/docs/latest/api/
+
+### Aplicações de Referência e Análise de Mercado
+* **Cookidoo.** (s.d.). *Plataforma oficial de receitas Bimby*. Vorwerk International. Recuperado de https://cookidoo.pt/
+* **Cookpad Inc.** (s.d.). *Cookpad: Receitas e comunidade culinária*. Recuperado de https://cookpad.com/pt
+* **Hindsight Labs LLC.** (s.d.). *Paprika Recipe Manager 3*. Recuperado de https://www.paprikaapp.com/
+* **Tasty.** (s.d.). *Tasty: Food and recipe network*. BuzzFeed, Inc. Recuperado de https://tasty.co/
