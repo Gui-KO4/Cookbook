@@ -22,7 +22,7 @@ A aplicação foi concebida para permitir a **criação, catalogação e armazen
 
 No que concerne à vertente social e de interação, o sistema integrará um módulo de gestão de perfis individuais, permitindo explorar receitas publicadas pela comunidade e registar reações a outros conteúdos.
 
-Adicionalmente, a solução incorpora um serviço de geolocalização com mapeamento de superfícies comerciais e a monitorização dos respetivos preços de produtos. Esta componente viabiliza a implementação de um comparador de preços de ingredientes entre diferentes estabelecimentos, capacitando os utilizadores a otimizar o custo das suas refeições de forma prática e informada.
+Adicionalmente, a solução incorpora um serviço de geolocalização com mapeamento de superfícies comerciais e a monitorização dos respetivos preços de produtos. 
 
 ---
 
@@ -61,7 +61,7 @@ A aplicação Cookbook procura preencher estas lacunas com uma interface intuiti
  - 4. Por fim abre um novo ecrã para o utilizador dar detalhes a receita(nome, tempo, dieta, privacidade, imagens ou videos)
  - 5. O utilizador carrega no botão "criar"
  - 6. O sistema da uma mensagem de confirmação da criação
- 
+
 ### **2º Guiao** - Vizualizar uma receita com filtros
 
 **Objetivo** - O Utilizador vizualizar uma receita utilizando filtros
@@ -118,11 +118,10 @@ Como resposta a estes desafios, a plataforma consolida uma abordagem integrada a
 | UC | Professor |  |
 |---|---|---|
 | Projeto de Desenvolvimento Móvel| Fábio Silva | Planeamento e desenvolvimento do projeto |
-| Base de Dados| Miguel Boavida | Criaçao e utilização da base de dados |
-| Programação de Dispositivos Móveis| João Monge | Desenvolvimento da Interface e do back-end da aplicação móvel |
-| Redes e Comunicação de Dados| Nathan Campos | Conhecimento dos protocolos de transmissão de dados na aplicação |
-| Matematica Discreta| André Torcato | Analise de dados com conceitos Matemáticos |
-| Interfaces e Usabilidade | Paula Neves | Planeamento e design da aplicação |
+|Base de Dados| Miguel Boavida | Criaçao e utilização da base de dados |
+|Programação de Dispositivos Móveis| João Monge | Desenvolvimento da Interface na aplicação móvel |
+| Redes e Comunicação de Dados| Nathan Campos | Desenvolvimento do Back-end da aplicação |
+|Matematica Discreta| André Torcato | Analise de dados com conceitos Matemáticos |
 
 ---
 
@@ -132,7 +131,7 @@ Como resposta a estes desafios, a plataforma consolida uma abordagem integrada a
 - O sistema deve permitir a criação, edição e eliminação de receitas culinárias.
 - O sistema deve permitir a pesquisa e filtragem de receitas com base em critérios como ingredientes, tempo de preparação e tipo de dieta.
 - O sistema deve permitir a partilha de receitas com outros utilizadores ou manter receitas privadas.
-- O sistema deve utilizar uma API para obter informações sobre lojas perto do utilizador com um mapa para melhor visualização.
+- O sistema deve utilizar uma API para obter informações sobre preços de produtos em diferentes lojas.
 - O sistema deve utilizar uma base de dados para armazenar informações sobre utilizadores, receitas e preços de produtos.
 - O sistema deve permitir os utilizadores a dar feedback sobre as receitas, incluindo avaliações, comentários, likes e favoritos.
 
@@ -167,7 +166,7 @@ Como resposta a estes desafios, a plataforma consolida uma abordagem integrada a
 
 ---
 ## 14. Conclusao
-
+Esta componente viabiliza a implementação de um comparador de preços de ingredientes entre diferentes estabelecimentos, capacitando os utilizadores a otimizar o custo das suas refeições de forma prática e informada.
 ---
 
 ## bibliografia
