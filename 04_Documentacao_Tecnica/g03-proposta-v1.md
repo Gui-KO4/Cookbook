@@ -117,7 +117,7 @@ Como resposta a estes desafios, a plataforma consolida uma abordagem integrada a
 
 ---
 
-### 9. Enquadramento nas UCs
+## 9. Enquadramento nas UCs
 
 | UC | Professor |  |
 |---|---|---|
@@ -130,8 +130,8 @@ Como resposta a estes desafios, a plataforma consolida uma abordagem integrada a
 
 ---
 
-### 10. Requisitos tecnicos
-#### Funcionais
+## 10. Requisitos tecnicos
+### Funcionais
 - O sistema deve permitir a criação de contas de utilizador com autenticação segura.
 - O sistema deve permitir a criação, edição e eliminação de receitas culinárias.
 - O sistema deve permitir a pesquisa e filtragem de receitas com base em critérios como ingredientes, tempo de preparação e tipo de dieta.
@@ -141,13 +141,13 @@ Como resposta a estes desafios, a plataforma consolida uma abordagem integrada a
 - O sistema deve permitir os utilizadores a dar feedback sobre as receitas, incluindo avaliações, comentários, likes e favoritos.
 
 
-#### Não Funcionais
+### Não Funcionais
 - O sistema deve ser responsivo e compatível com diferentes dispositivos móveis.
 - O sistema deve garantir a segurança dos dados do utilizador, incluindo informações pessoais e receitas.
 
 ---
 
-### 11. Arquitetura provisoria
+## 11. Arquitetura provisoria
 A arquitetura do sistema baseia-se numa abordagem cliente-servidor, em que a aplicação móvel (cliente) comunica com um servidor back-end para processar pedidos e gerir dados. A base de dados servirá para armazenar informações sobre utilizadores e receitas.
 
 Para a comunicação entre o cliente e o servidor será utilizada a REST API, garantindo uma troca de dados eficiente e segura. A aplicação móvel será desenvolvida com Flutter, na linguagem Dart, o que permitirá a criação de interfaces nativas para diferentes plataformas móveis.
@@ -156,9 +156,28 @@ Será utilizada a estrutura MVC (Model-View-Controller) para organizar o código
 
 O Node.js será utilizado para o desenvolvimento do servidor back-end. A base de dados MySQL será utilizada para armazenar informações estruturadas, garantindo a integridade e a consistência dos dados.
 
+### WBS (Work BreakDown Structure)
+1.0 Cookbook
+    1.1 Gestão e Documentação
+        1.1.1 Proposta de Projeto e Relatório Intermédio
+        1.1.2 Planeamento no GitHub Projects
+    1.2 Design e Interfaces (Figma)
+        1.2.1 Guiões de Teste e Personas
+        1.2.2 Wireframes e Mockups de Alta Fidelidade
+    1.3 Base de Dados (MySQL)
+        1.3.1 Diagrama Entidade-Relação (ER)
+        1.3.2 Scripts de Criação e Povoamento
+    1.4 Servidor Back-End (Node.js & REST)
+        1.4.1 Configuração da Arquitetura MVC
+        1.4.2 Endpoints de Autenticação e Receitas
+    1.5 Aplicação Móvel (Flutter & Dart)
+        1.5.1 Ecrã de Autenticação e Perfil
+        1.5.2 Feed e Filtros de Receitas
+        1.5.3 Módulo de Criação de Receitas
+        1.5.4 Lista de Compras
 ---
 
-### 12. Tecnologias provisorias
+## 12. Tecnologias provisorias
 
 | Função | Tecnologia |
 |---|---|
