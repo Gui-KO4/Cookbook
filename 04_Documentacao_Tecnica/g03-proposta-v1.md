@@ -155,26 +155,6 @@ Para a comunicação entre o cliente e o servidor será utilizada a REST API, ga
 Será utilizada a estrutura MVC (Model-View-Controller) para organizar o código, facilitando a sua compreensão e escrita, ao separar a lógica de negócio, a interface do utilizador e o controlo de fluxo da aplicação.
 
 O Node.js será utilizado para o desenvolvimento do servidor back-end. A base de dados MySQL será utilizada para armazenar informações estruturadas, garantindo a integridade e a consistência dos dados.
-
-### WBS (Work BreakDown Structure)
-1.0 Cookbook
-    1.1 Gestão e Documentação
-        1.1.1 Proposta de Projeto e Relatório Intermédio
-        1.1.2 Planeamento no GitHub Projects
-    1.2 Design e Interfaces (Figma)
-        1.2.1 Guiões de Teste e Personas
-        1.2.2 Wireframes e Mockups de Alta Fidelidade
-    1.3 Base de Dados (MySQL)
-        1.3.1 Diagrama Entidade-Relação (ER)
-        1.3.2 Scripts de Criação e Povoamento
-    1.4 Servidor Back-End (Node.js & REST)
-        1.4.1 Configuração da Arquitetura MVC
-        1.4.2 Endpoints de Autenticação e Receitas
-    1.5 Aplicação Móvel (Flutter & Dart)
-        1.5.1 Ecrã de Autenticação e Perfil
-        1.5.2 Feed e Filtros de Receitas
-        1.5.3 Módulo de Criação de Receitas
-        1.5.4 Lista de Compras
 ---
 
 ## 12. Tecnologias provisorias
@@ -195,6 +175,73 @@ O Node.js será utilizado para o desenvolvimento do servidor back-end. A base de
 | Primeira Entrega | 02 October 2026 | Relatorio da proposta do projeto, Mockups, Requisitos |
 | Segunda Entrega | 6 Novembro 2026 | Prototipo funcional com BD e servidor, Relatorio atualizado |
 | Terceira Entrega | 11 Dezembro 2026 | Versão final do projeto, relatorio e suportes visuais |
+
+### WBS (Work BreakDown Structure)
+1.0 Cookbook
+    1.1 Gestão e Documentação
+        1.1.1 Proposta de Projeto e Relatório Intermédio
+        1.1.2 Planeamento no GitHub Projects
+    1.2 Design e Interfaces (Figma)
+        1.2.1 Guiões de Teste e Personas
+        1.2.2 Wireframes e Mockups de Alta Fidelidade
+    1.3 Base de Dados (MySQL)
+        1.3.1 Diagrama Entidade-Relação (ER)
+        1.3.2 Scripts de Criação e Povoamento
+    1.4 Servidor Back-End (Node.js & REST)
+        1.4.1 Configuração da Arquitetura MVC
+        1.4.2 Endpoints de Autenticação e Receitas
+    1.5 Aplicação Móvel (Flutter & Dart)
+        1.5.1 Ecrã de Autenticação e Perfil
+        1.5.2 Feed e Filtros de Receitas
+        1.5.3 Módulo de Criação de Receitas
+        1.5.4 Lista de Compras
+
+### Project Charter
+
+#### 1. Justificação e Descrição Sumária
+Este projeto tem como objetivo preencher a falta de ferramentas integradas que combinem a gestão personalizada de receitas com a partilha social e o mapeamento de superfícies comerciais. A solução tem como objetivo incentivar o planeamento de refeições, combater o desperdício alimentar e ajudar os utilizadores a organizar os seus hábitos culinários.
+
+#### 2. Objetivos do Projeto 
+* Desenvolver uma aplicação móvel funcional e responsiva em Flutter/Dart para plataformas móveis.
+* Implementar uma arquitetura cliente-servidor assente num backend em Node.js com arquitetura REST e base de dados relacional MySQL.
+* Integrar ferramentas de geolocalização e mapas para localização de estabelecimentos comerciais próximos.
+* Garantir interfaces intuitivas validadas por critérios de usabilidade e testes com utilizadores.
+
+#### 3. Âmbito do Projeto 
+
+* **Em Âmbito (In-Scope):**
+  * Registo, autenticação segura e gestão de perfil de utilizador;
+  * Criação, edição, remoção e catalogação de receitas com controlo de visibilidade (pública/privada);
+  * Feed de receitas comunitárias com sistema de pesquisa e filtros por categorias;
+  * Sistema de reações (likes, favoritos, avaliações);
+  * Geração e gestão de listas de compras a partir das receitas;
+  * Mapeamento geolocalizado de estabelecimentos comerciais próximos;
+  * Investigação e exploração de modelos de comparação de preços de ingredientes.
+
+* **Fora de Âmbito :**
+  * Processamento de pagamentos ou compras diretas dentro da aplicação;
+  * Gestão logística de encomendas ou entregas ao domicílio;
+  * Integração obrigatória com inventários em tempo real de cadeias de retalho (serão utilizados dados de simulação/mock data caso não existam APIs públicas abertas).
+
+#### 4. Marcos Principais 
+
+| Milestone | Data Limite | Entregável Principal |
+|---|---|---|
+| **M1: Proposta de Projeto** | 02/10/2026 | Proposta formal (.md e PDF), WBS, Gráfico de Gantt e Mockups no Figma |
+| **M2: Protótipo Funcional** | 06/11/2026 | Versão Alfa funcional (Flutter + Node.js REST + MySQL), scripts SQL e Dicionário de Dados |
+| **M3: Versão Final** | 11/12/2026 | Aplicação final a correr no telemóvel, Manual do Utilizador, Vídeo narrado, Poster e Relatório Final |
+
+#### 5. Premissas e Restrições
+* **Tecnológicas:** Utilização obrigatória de Flutter, Figma, Dart, Node.js, MySQL e arquitetura MVC/REST.
+* **Metodológicas:** Gestão do fluxo de trabalho via GitHub Projects e controlo de versões em Git/GitHub.
+* **Dados:** Utilização de dados fictícios/simulados para efeitos de teste e povoamento da base de dados.
+
+#### 6. Riscos Iniciais e Estratégia de Mitigação
+
+| Risco Identificado | Impacto | Estratégia de Mitigação |
+|---|---|---|
+| Inexistência de APIs públicas e gratuitas de preços de supermercados | Alto | Criação de serviços mock/estruturas de dados internas para simulação realista de comparação de preços. |
+
 
 ---
 ## 14. Conclusão
