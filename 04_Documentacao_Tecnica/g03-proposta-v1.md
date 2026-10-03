@@ -125,6 +125,7 @@ Como resposta a estes desafios, a plataforma consolida uma abordagem integrada a
 |Programação de Dispositivos Móveis| João Monge | Desenvolvimento da Interface na aplicação móvel |
 | Redes e Comunicação de Dados| Nathan Campos | Desenvolvimento do Back-end da aplicação |
 |Matematica Discreta| André Torcato | Analise de dados com conceitos Matemáticos |
+| Interfaces e Usabilidade | Paula Neves | Planeamento e design da aplicação |
 
 ---
 
