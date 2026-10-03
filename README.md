@@ -23,8 +23,17 @@ Este projeto encontra-se em fase de planeamento com o fim de desenvolvimento pre
 
 |||
 |---|---|
-|[Memoria descritiva](01_Memoria_Descritiva/memoria.md) |  |
-| [Info](00_Identificacao/info.md) ||
+| [Proposta de Projeto](04_Documentacao_Tecnica/g03-proposta-v1.md) |  Proposta inicial do projeto para a primeira entrega|
+| [Memoria descritiva](01_Memoria_Descritiva/memoria.md) | documento que descreve o processo do projeto |
+| [Info](00_Identificacao/info.md) | metadados do projeto |
 
 --- 
-| [Proposta de Projeto](04_Documentacao_Tecnica/g03-proposta-v1.md) | Primeira versão da proposta (Entrega 1) |
+
+# Equipa 
+
+| Membro| Número de Estudante|
+|---|---|
+| André Maleitas | 20251381 |
+| Guilherme Soares | 20252152 |
+| Henrique Metelo | 20252138 |
+| Leandro Santos | 20252147 |
