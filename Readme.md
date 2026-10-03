@@ -48,7 +48,7 @@ A aplicação Cookbook procura preencher estas lacunas com uma interface intuiti
 
 ## 6. Versao Preliminar
 
-**1º Guiao** - ***Funcionalidade Core*** - Inserir uma receita na aplicaçao
+### **1º Guiao** - ***Funcionalidade Core*** - Inserir uma receita na aplicaçao
 
 **Objetivo** - O Utilizador Criar uma nova receita no seu perfil
 
@@ -61,6 +61,36 @@ A aplicação Cookbook procura preencher estas lacunas com uma interface intuiti
  - 4. Por fim abre um novo ecrã para o utilizador dar detalhes a receita(nome, tempo, dieta, privacidade, imagens ou videos)
  - 5. O utilizador carrega no botão "criar"
  - 6. O sistema da uma mensagem de confirmação da criação
+ 
+### **2º Guiao** - Vizualizar uma receita com filtros
+
+**Objetivo** - O Utilizador vizualizar uma receita utilizando filtros
+
+**Ator** - Utilizador 
+
+ - 1. O Utilizador acede ao ecrã inicial que será um feed com varias receitas de outros utilizadores
+ - 2. O Utilizador carrega no botão para filtras as receitas
+ - 3. O sistema abre um menu com varias opções de filtros
+ - 4. O utilizador escolhe o filtro que quiser
+ - 5. O sistema atualiza o feed com receitas filtradas
+ - 6. O utilizador carrega numa receita a gosto
+ - 7. O sistema abre um novo ecrã com os detalhes da receita
+ 
+ ### **3º Guiao** - Adicionar ingredientes a lista
+
+**Objetivo** - Adicionar ingredientes a lista de compras atraves de uma receita
+
+**Ator** - Utilizador Autenticado
+
+**pré requisitos** - o utilizador **precisa de ter uma conta e estar autenticado**
+ - 1. O Utilizador acede ao ecrã inicial e escolhe uma receita
+ - 2. O sistema mostra um novo ecrã com os detalhes da receita e a lista de ingredientes dessa receita
+ - 3. O Utilizador carrega no botão para adicionar os ingredientes a lista de compras
+ - 4. O sistema mostra uma mensagem a informar o utilizador que os ingredientes foram adicionados com sucesso
+ - 5. O Utilizador carrega no seu botao com o seu icon
+ - 6. O sistema carrega um novo ecrã com os detalhes do utilizador
+ - 7. O Utilizador carrega no botão "a minha lista de compras"
+ - 8. O sistema mostra um novo ecrã com a lista de compras do utilizador
 ---
 
 ## 7. Motivação e Identificação do Problema
