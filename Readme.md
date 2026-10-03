@@ -118,10 +118,10 @@ Como resposta a estes desafios, a plataforma consolida uma abordagem integrada a
 | UC | Professor |  |
 |---|---|---|
 | Projeto de Desenvolvimento Móvel| Fábio Silva | Planeamento e desenvolvimento do projeto |
-|Base de Dados| Miguel Boavida | Criaçao e utilização da base de dados |
-|Programação de Dispositivos Móveis| João Monge | Desenvolvimento da Interface na aplicação móvel |
-| Redes e Comunicação de Dados| Nathan Campos | Desenvolvimento do Back-end da aplicação |
-|Matematica Discreta| André Torcato | Analise de dados com conceitos Matemáticos |
+| Base de Dados| Miguel Boavida | Criaçao e utilização da base de dados |
+| Programação de Dispositivos Móveis| João Monge | Desenvolvimento da Interface e do back-end da aplicação móvel |
+| Redes e Comunicação de Dados| Nathan Campos | Conhecimento dos protocolos de transmissão de dados na aplicação |
+| Matematica Discreta| André Torcato | Analise de dados com conceitos Matemáticos |
 
 ---
 
