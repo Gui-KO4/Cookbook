@@ -155,6 +155,7 @@ Para a comunicação entre o cliente e o servidor será utilizada a REST API, ga
 Será utilizada a estrutura MVC (Model-View-Controller) para organizar o código, facilitando a sua compreensão e escrita, ao separar a lógica de negócio, a interface do utilizador e o controlo de fluxo da aplicação.
 
 O Node.js será utilizado para o desenvolvimento do servidor back-end. A base de dados MySQL será utilizada para armazenar informações estruturadas, garantindo a integridade e a consistência dos dados.
+
 ---
 
 ## 12. Tecnologias provisorias
