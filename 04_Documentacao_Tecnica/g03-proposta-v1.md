@@ -242,7 +242,11 @@ Este projeto tem como objetivo preencher a falta de ferramentas integradas que c
 |---|---|---|
 | Inexistência de APIs públicas e gratuitas de preços de supermercados | Alto | Criação de serviços mock/estruturas de dados internas para simulação realista de comparação de preços. |
 
+### Gráfico de Gantt e Cronograma de Tarefas
 
+A calendarização do desenvolvimento da aplicação e a distribuição temporal dos pacotes de trabalho foram estruturadas através da ferramenta de acompanhamento do GitHub Projects, funcionando como Gráfico de Gantt:
+
+![Gráfico de Gantt - Cronograma de Desenvolvimento](/02_Imagens/grafico_gantt.png)
 ---
 ## 14. Conclusão
 
