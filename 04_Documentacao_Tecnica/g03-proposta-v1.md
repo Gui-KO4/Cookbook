@@ -257,6 +257,7 @@ A integração de ferramentas para a criação, organização e partilha de rece
 Com a conclusão desta etapa preliminar de planeamento, ficam consolidados o levantamento de requisitos, os guiões de utilização, a especificação da arquitetura cliente-servidor (Flutter, Node.js e MySQL) e a calendarização dos trabalhos. A equipa direciona agora os esforços para a fase de implementação, focando-se na modelação da base de dados relacional, no desenvolvimento dos serviços REST e na prototipagem funcional das interfaces com vista à próxima fase de avaliação.
 
 Adicionalmente, ao longo do ciclo de desenvolvimento do projeto, a equipa pretende ter a oportunidade de investigar e implementar um comparador de preços de ingredientes entre diferentes estabelecimentos comerciais. Esta funcionalidade tem como propósito capacitar os utilizadores a otimizar o custo das suas refeições de forma prática e informada, constituindo uma vertente diferenciadora e de elevado valor técnico que enriquecerá a experiência da aplicação, aprofundando a exploração de APIs externas e a análise comparativa de dados.
+
 ---
 
 ## bibliografia
