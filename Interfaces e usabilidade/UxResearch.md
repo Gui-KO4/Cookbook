@@ -111,7 +111,29 @@ Com base nos resultados, identificámos uma funcionalidade com bastante potencia
 | **Cozinhar** | Encontrar a receita certa e segui-la sem complicações[cite: 5]. | Procura a receita entre capturas, favoritos e cadernos; segue os passos no telemóvel enquanto cozinha; adapta quantidades e improvisa com o que tem[cite: 5]. | "Onde é que eu guardei aquela receita?"[cite: 5]. | Confusa (não encontra a receita que quer)[cite: 5]. | Livro de receitas digital centralizado e pesquisável[cite: 5]. |
 | **Guardar e Reaproveitar** | Guardar as receitas de que gosta e gastar os ingredientes antes de se estragarem[cite: 5]. | Tira uma captura de ecrã da receita de que gostou[cite: 5]. | "Esta ficou tão boa, tenho de a guardar"[cite: 5]. | Felicidade (gostou e guardou a receita)[cite: 5]. | Guardar receitas facilmente e sugestões inteligentes de reaproveitamento[cite: 5]. |
 
-# Avaliação Heurística
+# Avaliação Heurística (Solução de Referência: Paprika)
+Para complementar os dados do estudo de mercado e obter uma perspetiva especializada sobre a experiência de utilização da aplicação, foi realizada uma avaliação heurística da solução digital Paprika (concorrente). A avaliação teve em conta o contexto de utilização móvel, analisando de forma sistemática os fluxos principais da aplicação.
+
+## Analise Sistemática da Interface
+Durante a avaliação, foi identificado que o design da aplicação Paprika apresenta, sobretudo, problemas de ergonomia e um design minimalista, nomeadamente, na navegação colocada no topo do ecrã, com áreas de toque pequenas, e numa barra superior sobrecarregada de ícones. No entanto, não falha em muitos tópicos das heurísticas.
+
+## Problemas Identificados e Soluções Propostas
+
+| Problema Identificado                                                                                                      | Heurística Violada                               | Prioridade | Solução                                                                                                                                 |
+| -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ---------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Barra de Navegação na area superior da tela e botões com zonas de toque pequenas.                                          | Interacção física e ergonomia - HMT 11           | Alta       | Colocar a barra de Navegação na area inferior da aplicação movel para facil acesso e aumentar as dimensões da area de toque dos botões. |
+| Na grelha de receitas e no ecrã de detalhes, a barra superior vermelha agrupa demasiados ícones de ação imediata.          | Estética e design minimalista - HMT 8            | Média      | Simplificar a barra superior mantendo apenas ações essenciais                                                                           |
+| Se o utilizador clicar na area de planeamento de comida por engano, precisa de fazer passos extra para poder voltar atras. | Controlo e liberdade do utilizador - HMT 3       | Média      | Incluir um botão visível de "Cancelar / Voltar"                                                                                         |
+| Não há tutorial inicial nem ajuda contextual; o suporte está fora da app e é pouco adaptado às tarefas.                    | Ajuda e documentação -HMT 10                     | Média      | Criar uma pagina na aplicação movél para ajuda do utilizador                                                                            |
+| Tarefas repetidas que exigem muitos toques podendo ser reduzidas.                                                          | Flexibilidade e eficiência de utilização - HMT 7 | Baixa      | Adicionar ações rápidas como seleção múltipla reduzindo toques extra.                                                                   |
+
+## Imagens de Referência para as evidencias observadas
+![Imagem de referência da aplicação Paprika](/Interfaces%20e%20usabilidade/assets/PaprikaImage.png)
+
+![Imagem de referência da aplicação Paprika 2](/Interfaces%20e%20usabilidade/assets/PaprikaImageReceitas.png)
+
+![Imagem de referência da aplicação Paprika 3](/Interfaces%20e%20usabilidade/assets/PaprikaMealPlanning.png)
+
 
 # Requisitos e estratégia UX
 
