@@ -109,12 +109,21 @@ Com base nos resultados, identificámos uma funcionalidade com bastante potencia
 | **Planeamento e Compras** | Perceber o que falta e comprar apenas o necessário[cite: 5]. | Abre o frigorífico e despensa para ver o que tem; escreve a lista de compras em papel ou nas notas[cite: 5]. | "Será que ainda tenho ovos em casa?"; "Dava jeito ter uma app para isto"[cite: 5]. | Cansada (nunca sabe o que tem na despensa)[cite: 5]. | Funcionalidade de despensa na aplicação[cite: 5]. |
 | **Cozinhar** | Encontrar a receita certa e segui-la sem complicações[cite: 5]. | Procura a receita entre capturas, favoritos e cadernos; segue os passos no telemóvel enquanto cozinha; adapta quantidades e improvisa com o que tem[cite: 5]. | "Onde é que eu guardei aquela receita?"[cite: 5]. | Confusa (não encontra a receita que quer)[cite: 5]. | Livro de receitas digital centralizado e pesquisável[cite: 5]. |
 | **Guardar e Reaproveitar** | Guardar as receitas de que gosta e gastar os ingredientes antes de se estragarem[cite: 5]. | Tira uma captura de ecrã da receita de que gostou[cite: 5]. | "Esta ficou tão boa, tenho de a guardar"[cite: 5]. | Felicidade (gostou e guardou a receita)[cite: 5]. | Guardar receitas facilmente e sugestões inteligentes de reaproveitamento[cite: 5]. |
+| **Inspiração** | Encontrar uma ideia para a refeição sem repetir sempre os mesmos pratos. | Pergunta à família o que apetece comer; procura ideias na internet e redes sociais; folhea cadernos de receitas e vê capturas de ecrã guardadas. | "O que é que vou fazer para o jantar?"; "Já estou farta de fazer sempre o mesmo". | Frustração (não sabe o que cozinhar). | Sistema de recomendação de receitas populares. |
+| **Planeamento e Compras** | Perceber o que falta e comprar apenas o necessário. | Abre o frigorífico e despensa para ver o que tem; escreve a lista de compras em papel ou nas notas. | "Será que ainda tenho ovos em casa?"; "Dava jeito ter uma app para isto". | Cansada (nunca sabe o que tem na despensa). | Funcionalidade de despensa na aplicação. |
+| **Cozinhar** | Encontrar a receita certa e segui-la sem complicações. | Procura a receita entre capturas, favoritos e cadernos; segue os passos no telemóvel enquanto cozinha; adapta quantidades e improvisa com o que tem. | "Onde é que eu guardei aquela receita?". | Confusa (não encontra a receita que quer). | Livro de receitas digital centralizado e pesquisável. |
+| **Guardar e Reaproveitar** | Guardar as receitas de que gosta e gastar os ingredientes antes de se estragarem. | Tira uma captura de ecrã da receita de que gostou. | "Esta ficou tão boa, tenho de a guardar". | Felicidade (gostou e guardou a receita). | Guardar receitas facilmente e sugestões inteligentes de reaproveitamento. |
 
 # Avaliação Heurística (Solução de Referência: Paprika)
 Para complementar os dados do estudo de mercado e obter uma perspetiva especializada sobre a experiência de utilização da aplicação, foi realizada uma avaliação heurística da solução digital Paprika (concorrente). A avaliação teve em conta o contexto de utilização móvel, analisando de forma sistemática os fluxos principais da aplicação.
 
 ## Analise Sistemática da Interface
 Durante a avaliação, foi identificado que o design da aplicação Paprika apresenta, sobretudo, problemas de ergonomia e um design minimalista, nomeadamente, na navegação colocada no topo do ecrã, com áreas de toque pequenas, e numa barra superior sobrecarregada de ícones. No entanto, não falha em muitos tópicos das heurísticas.
+
+## Critério de Prioridade
+- Alta: Afeta tarefas frequentes ou pode causar perda de dados/bloqueio.
+- Média: Causa confusão, mas existe forma de contornar.
+- Baixa: Impacto reduzido ou limitado a utilizadores específicos.
 
 ## Problemas Identificados e Soluções Propostas
 
@@ -132,12 +141,6 @@ Durante a avaliação, foi identificado que o design da aplicação Paprika apre
 ![Imagem de referência da aplicação Paprika 2](/Interfaces%20e%20usabilidade/assets/PaprikaImageReceitas.png)
 
 ![Imagem de referência da aplicação Paprika 3](/Interfaces%20e%20usabilidade/assets/PaprikaMealPlanning.png)
-
-| **Inspiração** | Encontrar uma ideia para a refeição sem repetir sempre os mesmos pratos. | Pergunta à família o que apetece comer; procura ideias na internet e redes sociais; folhea cadernos de receitas e vê capturas de ecrã guardadas. | "O que é que vou fazer para o jantar?"; "Já estou farta de fazer sempre o mesmo". | Frustração (não sabe o que cozinhar). | Sistema de recomendação de receitas populares. |
-| **Planeamento e Compras** | Perceber o que falta e comprar apenas o necessário. | Abre o frigorífico e despensa para ver o que tem; escreve a lista de compras em papel ou nas notas. | "Será que ainda tenho ovos em casa?"; "Dava jeito ter uma app para isto". | Cansada (nunca sabe o que tem na despensa). | Funcionalidade de despensa na aplicação. |
-| **Cozinhar** | Encontrar a receita certa e segui-la sem complicações. | Procura a receita entre capturas, favoritos e cadernos; segue os passos no telemóvel enquanto cozinha; adapta quantidades e improvisa com o que tem. | "Onde é que eu guardei aquela receita?". | Confusa (não encontra a receita que quer). | Livro de receitas digital centralizado e pesquisável. |
-| **Guardar e Reaproveitar** | Guardar as receitas de que gosta e gastar os ingredientes antes de se estragarem. | Tira uma captura de ecrã da receita de que gostou. | "Esta ficou tão boa, tenho de a guardar". | Felicidade (gostou e guardou a receita). | Guardar receitas facilmente e sugestões inteligentes de reaproveitamento. |
-# Avaliação Heurística
 
 # Requisitos e estratégia UX
 
