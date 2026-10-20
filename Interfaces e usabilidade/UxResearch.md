@@ -142,73 +142,68 @@ Durante a avaliação, foi identificado que o design da aplicação Paprika apre
 
 ![Imagem de referência da aplicação Paprika 3](/Interfaces%20e%20usabilidade/assets/PaprikaMealPlanning.png)
 
-# Requisitos e estratégia UX
+# Requisitos e Estratégia UX
 
-## Necessidades e problemas prioritários dos utilizadores
+## Necessidades e Problemas Prioritários dos Utilizadores
 
-- **Falta de Inspiração Diária:** 51,2% dos inquiridos referem a falta de ideias sobre o que cozinhar como o principal desafio no dia a dia.
-- **Dispersão e Desorganização de Receitas:** 42,9% guardam receitas em capturas de ecrã e 34,5% em cadernos físicos, gerando perda de tempo, desorganização e frustração ao tentar reencontrar um prato.
-- **Dificuldade no Planeamento e Gestão de Tempo:** 40,5% apontam a falta de tempo para planear as refeições e organizar as compras semanais como uma dor relevante.
+- **Falta de Inspiração Diária:** A maioria dos inquiridos (51,2%) refere a falta de ideias sobre o que cozinhar como o principal desafio no dia a dia.
+- **Dispersão e Desorganização de Receitas:** O hábito frequente de guardar receitas em capturas de ecrã (42,9%) e cadernos físicos (34,5%) gera perda de tempo, desorganização e frustração ao tentar reencontrar um prato.
+- **Dificuldade no Planeamento e Gestão de Tempo:** Grande parte dos utilizadores (40,5%) aponta a falta de tempo para planear as refeições e organizar as compras semanais como uma dor relevante.
 
-## Problemas de usabilidade identificados
+## Problemas de Usabilidade Identificados (Avaliação Heurística)
 
-- **Problemas na Concorrência:** Interfaces arcaicas, navegação pouco intuitiva e ausência de mecanismos comunitários e de partilha social simples (ex.: *Paprika*, *Cookpad*).
-- **Oportunidades de Melhoria:** Desenvolver uma interface moderna e acessível para utilizadores com pouca experiência digital, integrando um motor de sugestão automática baseado na validade dos ingredientes da despensa.
+- **Ergonomia e Áreas de Toque Deficientes (HMT 11):** Navegação principal posicionada no topo do ecrã e botões com zonas táticas reduzidas, dificultando a utilização confortável com apenas uma mão.
+- **Poluição e Sobrecarga Visual (HMT 8):** Excesso de ícones de ação imediata agrupados na barra superior nos ecrãs de grelha e detalhes de receita, aumentando desnecessariamente a carga cognitiva.
+- **Rigidez nos Fluxos e Falta de Controlo (HMT 3):** Dificuldade em cancelar ou voltar atrás em ecrãs como o planeamento de refeições, exigindo passos extra e evitáveis.
+- **Ausência de Apoio ao Utilizador (HMT 10):** Inexistência de um tutorial inicial (*onboarding*) ou ajuda contextual dentro da aplicação, penalizando utilizadores com menor literacia digital.
+- **Excesso de Toques e Ineficiência (HMT 7):** Tarefas repetitivas (como adicionar múltiplos ingredientes) exigem demasiados toques por falta de ações rápidas ou funcionalidade de seleção múltipla.
 
-## Oportunidades de melhorias
+## Oportunidades de Melhoria
 
-Com base no cruzamento entre os dados da User Research, o perfil da Persona e a análise da concorrência, identificaram-se as seguintes oportunidades chave para o design e desenvolvimento do CookBook:
+Com base no cruzamento entre os dados da User Research, o perfil da Persona e a Avaliação Heurística da aplicação concorrente, identificaram-se as seguintes oportunidades chave:
 
-- **Centralização Inteligente de Receitas:** 
-  * *Oportunidade:* Substituir o hábito disperso de guardar receitas em capturas de ecrã (42,9%) e cadernos físicos (34,5%) por um "Livro de Receitas Digital" centralizado, pesquisável e organizado por categorias.
-
-- **Motor de Sugestões Baseado em Ingredientes a Expirar:** 
-  * *Oportunidade:* Responder à principal dor do utilizador (51,2% refere falta de inspiração) através de um algoritmo que sugere pratos com base na validade dos produtos na despensa. Esta funcionalidade obteve um acolhimento extremamente positivo no inquérito, com 59,5% dos inquiridos a classificá-la com a pontuação máxima de utilidade (5/5).
-
-- **Interface Adaptada a Utilizadores com Pouca Literacia Digital:** 
-  * *Oportunidade:* Como 48,8% dos inquiridos nunca usou uma app de cozinha e a faixa etária predominante situa-se entre os 48 e os 60 anos, existe a oportunidade de desenhar uma interface limpa, intuitiva e sem termos técnicos complexos, facilitando a adoção do produto.
-
-- **Diferenciação pela Vertente Comunitária e Social:** 
-  * *Oportunidade:* Superar a concorrência direta (como Paprika ou Cookpad), que apresenta interfaces arcaicas e ausência de interação social, oferecendo um feed comunitário para partilha de receitas, truques de reaproveitamento e reações (*likes* e favoritos).
-
-- **Integração Fluida entre Receita e Planeamento de Compras:** 
-  * *Oportunidade:* Resolver o problema da falta de tempo para planear refeições (40,5%) através do envio automático dos ingredientes de qualquer receita diretamente para uma lista de compras interativa.
-
-- **Assistente de Confeção ("Modo Cozinha"):** 
-  * *Oportunidade:* Melhorar a experiência no momento de cozinhar (evitando a confusão de procurar a receita enquanto se prepara os alimentos), disponibilizando um modo de ecrã sempre ativo (*Keep Screen On*) com os passos de preparação apresentados de forma clara e faseada.
+- **Centralização Inteligente de Receitas:** Substituir o hábito disperso de guardar receitas em capturas de ecrã e cadernos físicos por um "Livro de Receitas Digital" centralizado, pesquisável e organizado por categorias.
+- **Motor de Sugestões Baseado em Ingredientes a Expirar:** Responder à falta de inspiração através de um algoritmo que sugere pratos com base na validade dos produtos na despensa (funcionalidade avaliada com a pontuação máxima de utilidade por 59,5% dos inquiridos).
+- **Interface Ergonómica e Adaptada a Pouca Literacia Digital:** Desenhar uma interface limpa, intuitiva e sem termos técnicos complexos, corrigindo os erros de ergonomia da concorrência através de uma navegação inferior (*Bottom Navigation*) acessível ao polegar.
+- **Diferenciação pela Vertente Comunitária e Social:** Superar a concorrência direta oferecendo um feed comunitário para partilha de receitas, truques de reaproveitamento e reações (como *likes* e favoritos).
+- **Integração Fluida entre Receita e Planeamento de Compras:** Resolver a falta de tempo para planear refeições através do envio automático dos ingredientes de qualquer receita diretamente para uma lista de compras interativa com suporte para seleção múltipla.
+- **Assistente de Confeção ("Modo Cozinha"):** Disponibilizar um modo de ecrã sempre ativo (*Keep Screen On*) com os passos de preparação apresentados de forma clara e faseada.
 
 ## Objetivos de UX
 
 - **Simplicidade e Acessibilidade:** Garantir que utilizadores entre os 48 e 60 anos (dos quais 48,8% nunca usaram aplicações de cozinha) consigam navegar sem hesitação.
-- **Redução da Carga Cognitiva:** Permitir que a decisão do que cozinhar ao fim do dia seja tomada de forma intuitiva e em menos de 3 passos na aplicação.
-- **Feedback Visual Claro:** Fornecer confirmações imediatas para todas as interações (ex.: ao adicionar ingredientes à lista de compras ou guardar receitas).
+- **Redução da Carga Cognitiva:** Descongestionamento visual das barras de ação e decisão sobre o que cozinhar tomada com facilidade em poucos passos.
+- **Feedback Visual e Libertação do Utilizador:** Fornecer confirmações imediatas para todas as interações e disponibilizar botões claros de "Cancelar / Voltar" em todos os fluxos.
 
-## Requisitos funcionais
+## Requisitos Funcionais
 
 - **RF01 - Organização de Receitas:** O sistema deve permitir criar, editar, catalogar e armazenar receitas num repositório pessoal centralizado.
 - **RF02 - Pesquisa e Filtros:** O sistema deve permitir pesquisar e filtrar receitas por ingredientes disponíveis, tempo de preparação, tipo de refeição ou restrições alimentares.
 - **RF03 - Sugestão por Validade da Despensa:** O sistema deve sugerir receitas automaticamente com base nos ingredientes registados na despensa e nas suas respetivas datas de validade.
-- **RF04 - Lista de Compras Automática:** O sistema deve permitir exportar os ingredientes de qualquer receita diretamente para uma lista de compras personalizável.
+- **RF04 - Lista de Compras Automática:** O sistema deve permitir exportar os ingredientes de qualquer receita diretamente para uma lista de compras personalizável, com suporte para seleção múltipla.
 - **RF05 - Comunidade e Partilha:** O sistema deve permitir interagir num feed comunitário com reações (*likes*), comentários e opção de guardar em favoritos.
 - **RF06 - Mapeamento Geolocalizado:** O sistema deve integrar um mapa de geolocalização com a identificação de superfícies comerciais próximas.
+- **RF07 - Onboarding e Ajuda Contextual:** O sistema deve disponibilizar um guia inicial explicativo e secção de ajuda integrada na aplicação para apoio à navegação.
 
-## Requisitos de experiência, usabilidade e acessibilidade
+## Requisitos de Experiência, Usabilidade e Acessibilidade
 
 - **RNF01 - Legibilidade e Contraste:** Utilização de tipografia clara (tamanho mínimo de 16pt no corpo de texto) e contraste de cor adequado em conformidade com as normas WCAG AA.
-- **RNF02 - Prevenção de Erros:** Diálogos de confirmação antes de ações irreversíveis (ex.: eliminar uma receita ou limpar a lista de compras).
+- **RNF02 - Prevenção de Erros e Reversibilidade:** Diálogos de confirmação antes de ações irreversíveis e presença constante de opções claras para cancelar ou voltar atrás nos fluxos.
+- **RNF03 - Interface Minimalista:** Limitação do número de ações primárias visíveis em simultâneo no ecrã para evitar a sobrecarga informativa observada na concorrência.
 
-## Requisitos específicos do contexto mobile
+## Requisitos Específicos do Contexto Mobile
 
 - **RMB01 - Touch Targets Ergonomicamente Adequados:** Dimensão mínima de 48x48 dp para botões e ícones clicáveis.
-- **RMB02 - Navegação por Thumb Zone:** Estrutura principal baseada numa *Bottom Navigation Bar* acessível ao alcance do polegar.
+- **RMB02 - Navegação por Thumb Zone:** Estrutura de navegação principal posicionada obrigatoriamente na área inferior do ecrã (*Bottom Navigation Bar*), facilitando o alcance com uma só mão.
 - **RMB03 - Modo de Cozinha (Ecrã Ativo):** Funcionalidade para manter o ecrã ligado (*Keep Screen On*) durante a visualização do passo a passo de uma receita.
+- **RMB04 - Atalhos e Seleção Múltipla:** Ações rápidas em listas (como despensa e compras) para reduzir o número total de toques necessários.
 
-## Prioridades para o desenvolvimento da solução
+## Prioridades para o Desenvolvimento da Solução
 
 | Categoria | Requisitos Incluídos | Justificação |
 |---|---|---|
-| **Must Have** *(Obrigatório)* | • Autenticação de Utilizador<br>• Gestão de Receitas (Criar/Editar)<br>• Feed e Filtros de Pesquisa<br>• Lista de Compras | Funcionalidades nucleares indispensáveis para resolver os problemas base de organização e pesquisa. |
-| **Should Have** *(Importante)* | • Sugestões por Ingredientes da Despensa<br>• Interações Sociais (*likes*, favoritos) | Funcionalidades de elevado valor acrescentado validadas positivamente no inquérito. |
-| **Could Have** *(Desejável)* | • Mapeamento Geolocalizado de Lojas Próximas | Módulos secundários que enriquecem a experiência global da aplicação. |
-| **Won't Have** *(Fora do Âmbito)* | • Processamento de pagamentos diretos<br>• Integração com carrinhos de compras de supermercados online | Funcionalidades fora do âmbito do semestre por complexidade técnica. |
+| **Must Have** *(Obrigatório)* | • Autenticação de Utilizador<br>• Gestão de Receitas (Criar/Editar)<br>• Feed e Filtros de Pesquisa<br>• Lista de Compras com Seleção Múltipla<br>• Navegação Inferior Ergonómica | Funcionalidades nucleares indispensáveis para resolver os problemas base de organização, pesquisa e ergonomia mobile. |
+| **Should Have** *(Importante)* | • Sugestões por Ingredientes da Despensa<br>• Interações Sociais (*likes*, favoritos)<br>• Onboarding e Secção de Ajuda<br>• Modo de Cozinha (Ecrã Ativo) | Funcionalidades de elevado valor acrescentado validadas na User Research e resposta direta às falhas de ajuda da concorrência. |
+| **Could Have** *(Desejável)* | • Mapeamento Geolocalizado de Lojas Próximas<br>• Importação automática de receitas via link | Módulos secundários que enriquecem a experiência global da aplicação. |
+| **Won't Have** *(Fora do Âmbito)* | • Processamento de pagamentos diretos<br>• Integração com carrinhos de compras de supermercados online | Funcionalidades fora do âmbito do semestre por elevada complexidade técnica.|
 # Síntese
