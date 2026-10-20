@@ -167,7 +167,6 @@ Com base no cruzamento entre os dados da User Research, o perfil da Persona e a 
 - **Interface Ergonómica e Adaptada a Pouca Literacia Digital:** Desenhar uma interface limpa, intuitiva e sem termos técnicos complexos, corrigindo os erros de ergonomia da concorrência através de uma navegação inferior (*Bottom Navigation*) acessível ao polegar.
 - **Diferenciação pela Vertente Comunitária e Social:** Superar a concorrência direta oferecendo um feed comunitário para partilha de receitas, truques de reaproveitamento e reações (como *likes* e favoritos).
 - **Integração Fluida entre Receita e Planeamento de Compras:** Resolver a falta de tempo para planear refeições através do envio automático dos ingredientes de qualquer receita diretamente para uma lista de compras interativa com suporte para seleção múltipla.
-- **Assistente de Confeção ("Modo Cozinha"):** Disponibilizar um modo de ecrã sempre ativo (*Keep Screen On*) com os passos de preparação apresentados de forma clara e faseada.
 
 ## Objetivos de UX
 
@@ -195,7 +194,6 @@ Com base no cruzamento entre os dados da User Research, o perfil da Persona e a 
 
 - **RMB01 - Touch Targets Ergonomicamente Adequados:** Dimensão mínima de 48x48 dp para botões e ícones clicáveis.
 - **RMB02 - Navegação por Thumb Zone:** Estrutura de navegação principal posicionada obrigatoriamente na área inferior do ecrã (*Bottom Navigation Bar*), facilitando o alcance com uma só mão.
-- **RMB03 - Modo de Cozinha (Ecrã Ativo):** Funcionalidade para manter o ecrã ligado (*Keep Screen On*) durante a visualização do passo a passo de uma receita.
 - **RMB04 - Atalhos e Seleção Múltipla:** Ações rápidas em listas (como despensa e compras) para reduzir o número total de toques necessários.
 
 ## Prioridades para o Desenvolvimento da Solução
@@ -203,7 +201,11 @@ Com base no cruzamento entre os dados da User Research, o perfil da Persona e a 
 | Categoria | Requisitos Incluídos | Justificação |
 |---|---|---|
 | **Must Have** *(Obrigatório)* | • Autenticação de Utilizador<br>• Gestão de Receitas (Criar/Editar)<br>• Feed e Filtros de Pesquisa<br>• Lista de Compras com Seleção Múltipla<br>• Navegação Inferior Ergonómica | Funcionalidades nucleares indispensáveis para resolver os problemas base de organização, pesquisa e ergonomia mobile. |
-| **Should Have** *(Importante)* | • Sugestões por Ingredientes da Despensa<br>• Interações Sociais (*likes*, favoritos)<br>• Onboarding e Secção de Ajuda<br>• Modo de Cozinha (Ecrã Ativo) | Funcionalidades de elevado valor acrescentado validadas na User Research e resposta direta às falhas de ajuda da concorrência. |
-| **Could Have** *(Desejável)* | • Mapeamento Geolocalizado de Lojas Próximas<br>• Importação automática de receitas via link | Módulos secundários que enriquecem a experiência global da aplicação. |
+| **Should Have** *(Importante)* | • Sugestões por Ingredientes da Despensa<br>• Interações Sociais (*likes*, favoritos)<br>• Onboarding e Secção de Ajuda | Funcionalidades de elevado valor acrescentado validadas na User Research e resposta direta às falhas de ajuda da concorrência. |
+| **Could Have** *(Desejável)* | • Mapeamento Geolocalizado de Lojas Próximas | Módulos secundários que enriquecem a experiência global da aplicação. |
 | **Won't Have** *(Fora do Âmbito)* | • Processamento de pagamentos diretos<br>• Integração com carrinhos de compras de supermercados online | Funcionalidades fora do âmbito do semestre por elevada complexidade técnica.|
 # Síntese
+
+Através da nossa pesquisa, verificámos que os nossos utilizadores-alvo sofrem de falta de inspiração para saber o que cozinhar e de falta de organização das receitas. Notámos também que as aplicações concorrentes têm falta de ergonomia.
+
+Na segunda fase do nosso protótipo, queremos melhorar a ergonomia e ter uma interface mais simples, fácil de usar e legível. As nossas tarefas serão concluídas com o mínimo de toques possível, haverá prevenção de erros e o utilizador poderá regressar às ações. 
