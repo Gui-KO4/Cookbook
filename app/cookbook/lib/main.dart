@@ -15,11 +15,17 @@ class MyApp extends StatelessWidget {
         body: Center(
           child: Column(
             children: [
-              Row(children: [
-                  Column(children: [
-                    Text("Today's Kitchen feed"),
-                    Text("Fresh artisanal recipes tailored for you")
-                  ],),  
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                
+                children: [
+                  Expanded(child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text("Today's Kitchen feed"),
+                      Text("Fresh artisanal recipes tailored for you", softWrap: true,)
+                  ],),),    
+                  SizedBox(width: 12,),
                   ElevatedButton.icon(onPressed: () => {}, label: Text("")),
                 ]
               )
