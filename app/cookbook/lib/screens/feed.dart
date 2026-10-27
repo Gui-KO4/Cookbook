@@ -36,7 +36,9 @@ class FeedScreen extends StatelessWidget {
                       Text("Today's Kitchen Feed", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28), softWrap: true,),
                       Text("Fresh artisanal recipes tailored for you",style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontSize: 14), softWrap: true,),
 
-                  ],),),    
+                      ],
+                    ),
+                  ),    
                   SizedBox(width: 12,),
                   ElevatedButton.icon(onPressed: () => {}, label: Text("24 New"), icon: Icon(Icons.auto_awesome), style: ElevatedButton.styleFrom(backgroundColor: Color.fromRGBO(186, 238, 217, 100), foregroundColor: Colors.black),),
                 ]
@@ -45,11 +47,10 @@ class FeedScreen extends StatelessWidget {
             Expanded(
               child:
               ListView.builder(
-              itemCount: receitas.length, // Número total de receitas atualmente na memória
+              itemCount: receitas.length,
               itemBuilder: (context, index) {
                 final receita = receitas[index];
                 
-                // Devolve o teu cartão configurado para esta receita
                 return Container(
                 padding: EdgeInsets.all(12),
                 child: 
