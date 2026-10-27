@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'widgets/recipe.dart';
+import 'mainnavigationscreen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -28,57 +28,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'poppins',
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          leading: IconButton( icon: Icon(Icons.search), onPressed: () => {},),
-          title: Center(child: Text("CookBook", style: TextStyle( fontWeight: FontWeight.bold, fontSize: 34), )),
-          actions: [IconButton(onPressed: () =>{}, icon: Icon(Icons.person))],
-        ),
-        body: Center(
-          child: Column(
-            children: [
-              Container(
-                padding: EdgeInsets.all(24),
-                child: 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                
-                children: [
-                  Expanded(child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text("Today's Kitchen Feed", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28), softWrap: true,),
-                      Text("Fresh artisanal recipes tailored for you",style: TextStyle(fontFamily: 'Plus Jakarta Sans', fontSize: 14), softWrap: true,),
-
-                  ],),),    
-                  SizedBox(width: 12,),
-                  ElevatedButton.icon(onPressed: () => {}, label: Text("24 New"), icon: Icon(Icons.auto_awesome), style: ElevatedButton.styleFrom(backgroundColor: Color.fromRGBO(186, 238, 217, 100), foregroundColor: Colors.black),),
-                ]
-              )
-            ),
-            Expanded(
-              child:
-              ListView.builder(
-              itemCount: receitas.length, // Número total de receitas atualmente na memória
-              itemBuilder: (context, index) {
-                final receita = receitas[index];
-                
-                // Devolve o teu cartão configurado para esta receita
-                return RecipeCard(
-                  name: receita.nome,
-                  details:  receita.descricao,
-                  imgurl: receita.imgurl,
-                  time: receita.tempo,
-                  rating: receita.rating
-                  );
-                  },
-                )
-              ),
-            
-            ],
-          ),
-        ),
-      ),
+      home: MainNavigationScreen(),
+      
     );
   }
 }

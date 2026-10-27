@@ -16,24 +16,12 @@ const receitas = [
       Receita("choco", "choco", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Q3Il2CTqOPWWO46lY0GE5f1YHYUGJKyODzVeMgbe8Q&s=10 ", 4, 5),
         Receita("choco", "choco", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh6YDRmFltn0tccuJQ4fEl60FsbV1knQLep7SRD1lFfg&s=10 ", 4, 5),
 ];
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class FeedScreen extends StatelessWidget {
+  const FeedScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'CookBook',
-      theme: ThemeData(
-        fontFamily: 'poppins',
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          leading: IconButton( icon: Icon(Icons.search), onPressed: () => {},),
-          title: Center(child: Text("CookBook", style: TextStyle( fontWeight: FontWeight.bold, fontSize: 34), )),
-          actions: [IconButton(onPressed: () =>{}, icon: Icon(Icons.person))],
-        ),
-        body: Center(
-          child: Column(
+    return Column(
             children: [
               Container(
                 padding: EdgeInsets.all(24),
@@ -62,21 +50,21 @@ class MyApp extends StatelessWidget {
                 final receita = receitas[index];
                 
                 // Devolve o teu cartão configurado para esta receita
-                return RecipeCard(
-                  name: receita.nome,
-                  details:  receita.descricao,
-                  imgurl: receita.imgurl,
-                  time: receita.tempo,
-                  rating: receita.rating
+                return Container(
+                padding: EdgeInsets.all(12),
+                child: 
+                  RecipeCard(
+                    name: receita.nome,
+                    details:  receita.descricao,
+                    imgurl: receita.imgurl,
+                    time: receita.tempo,
+                    rating: receita.rating
+                    ),
                   );
-                  },
-                )
-              ),
-            
-            ],
-          ),
-        ),
-      ),
-    );
+                },
+              )
+            ),
+          ],
+        );
   }
 }
