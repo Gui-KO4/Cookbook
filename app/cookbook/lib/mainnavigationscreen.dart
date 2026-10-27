@@ -33,7 +33,9 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
         padding: EdgeInsets.all(12),        
           child:
               Card.outlined(
-                
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
                 elevation: 2,
                 child: 
                 Row(
