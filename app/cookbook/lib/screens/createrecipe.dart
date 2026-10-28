@@ -9,6 +9,14 @@ class Ingrediente{
   const Ingrediente(this.name, this.type, this.add, this.quantity,);
 }
 
+const types = [
+  "arroz",
+  "feijao",
+  "mambo",
+  "rastoz",
+  "cooisa"
+];
+
 const ingredientes = [
   Ingrediente("name", "type", true, 4)
 ];
@@ -18,13 +26,12 @@ class CreateRecipeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.all(12),
       child: Column(
         children: [
-          // 1. Cabeçalho (com tamanho natural, sem Expanded a esticar)
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               IconButton(
                 icon: const Icon(Icons.arrow_back),
@@ -32,11 +39,13 @@ class CreateRecipeScreen extends StatelessWidget {
               ),
               Column(
                 mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
-                      Text("Step ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                      Text("Step 1 of 2 ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                       Text("Catalog", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                     ],
                   ),
@@ -56,19 +65,43 @@ class CreateRecipeScreen extends StatelessWidget {
 
           const SizedBox(height: 12),
 
-          // 2. Barra de pesquisa
-          const SearchBar(),
+          const SearchBar(hintText: ("Procurar"),),
 
           const SizedBox(height: 12),
-
-          // 3. APENAS o ListView fica com Expanded para ocupar o espaço restante
+          
+              SizedBox(
+                height: 32,
+                child: 
+                ListView.builder(
+                  clipBehavior: Clip.none,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: types.length,
+                  itemBuilder: (context, index){
+                    final type = types[index];
+                    return 
+                    Container(
+                    padding: EdgeInsets.only(right: 4),  
+                    child: 
+                      ElevatedButton(
+                        onPressed: ()=>{}, 
+                        child:
+                          Text(type),
+                      ),
+                    );
+                  }
+                  
+                  )
+              ),
+            
+          const SizedBox(height: 12),
+          
           Expanded(
             child: ListView.builder(
               itemCount: ingredientes.length,
               itemBuilder: (context, index) {
                 final ingrediente = ingredientes[index];
                 return Padding(
-                  padding: const EdgeInsets.only(bottom: 8.0),
+                  padding: EdgeInsets.only(bottom: 8.0),
                   child: ingredientCard(
                     name: ingrediente.name,
                     type: ingrediente.type,
