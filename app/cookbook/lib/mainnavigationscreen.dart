@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screens/feed.dart';
+import 'screens/createrecipe.dart';
 
 class MainNavigationScreen extends StatefulWidget {
   const MainNavigationScreen({super.key});
@@ -12,6 +13,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
   int _SelectedIndex = 0;
 
   final List<Widget> _screens = const [
+    CreateRecipeScreen(),
     FeedScreen(),
   ];
 
