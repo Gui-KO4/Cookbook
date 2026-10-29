@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '/widgets/recipe.dart';
+import '/widgets/navbar.dart';
 
 class Receita {
   final String nome;
@@ -18,10 +19,58 @@ const receitas = [
 ];
 class FeedScreen extends StatelessWidget {
   const FeedScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'CookBook',
+      theme: ThemeData(
+        fontFamily: 'poppins',
+      ),
+      home: Scaffold(
+       appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        scrolledUnderElevation: 0,
+        centerTitle: true,
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 16.0),
+          child: CircleAvatar(
+            backgroundColor: Colors.black.withValues(alpha: 0.04),
+            child: IconButton(
+              icon: const Icon(Icons.search, color: Colors.black87, size: 20),
+              onPressed: () => Navigator.pushNamed(context, '/'),
+            ),
+          ),
+        ),
+        title: const Text(
+          "CookBook",
+          style: TextStyle(
+            color: Colors.black87,
+            fontWeight: FontWeight.w600,
+            fontSize: 20,
+          ),
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 16.0),
+            child: CircleAvatar(
+              radius: 18,
+              backgroundColor: const Color(0xFF1B4D3E),
+              child: IconButton(
+                padding: EdgeInsets.zero,
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.person_outline,
+                  color: Colors.white,
+                  size: 20,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+        body: Column(
             children: [
               Container(
                 padding: EdgeInsets.all(24),
@@ -66,6 +115,9 @@ class FeedScreen extends StatelessWidget {
               )
             ),
           ],
-        );
+        ),
+      bottomNavigationBar: buildCookBookBottomNav(context, 0)
+      ),
+    );
   }
 }
