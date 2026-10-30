@@ -55,7 +55,7 @@ class LoginForm extends State<LoginPage> {
                       Text(
                         "Join CookBook",
                         style: TextStyle(
-                          fontSize: 24,
+                          fontSize: 24, 
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -164,10 +164,11 @@ class LoginForm extends State<LoginPage> {
                           ),
                           SizedBox(height: 12),
                           TextButton(
+                            style: TextButton.styleFrom(foregroundColor: Colors.black),
                             onPressed: () {
                               Navigator.pushNamed(context, '/register');
                             },
-                            child: Text("Não tem conta? crie uma"),
+                            child: Text("Não tem conta? crie uma",style: TextStyle(decoration: TextDecoration.underline),),
                           ),
                         ],
                       ),
