@@ -20,6 +20,7 @@ class RegisterForm extends State<RegisterPage> {
       title: 'CookBook',
       theme: ThemeData(fontFamily: 'poppins'),
       home: Scaffold(
+        resizeToAvoidBottomInset: false,
         //Widget la da intro
         body: Column(
           children: [
