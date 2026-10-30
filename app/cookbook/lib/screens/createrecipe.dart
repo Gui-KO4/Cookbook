@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import '/widgets/addingrediente.dart';
 import '/widgets/navbar.dart';
-class Ingrediente{
-  final String name;
-  final String type;
-  final bool add;
-  final int quantity;
-  const Ingrediente(this.name, this.type, this.add, this.quantity,);
-}
+import '/Models/ingredients.dart';
+import 'createrecipestep2.dart';
+import 'feed.dart';
+
 
 const types = [
   "arroz",
@@ -103,7 +100,13 @@ class CreateRecipeScreen extends StatelessWidget {
                   ),
                   IconButton(
                     icon: const Icon(Icons.cancel),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                            MaterialPageRoute(
+                              builder: (context) => const FeedScreen(), // Replace with your destination screen
+                            ),
+                            );
+                    },
                   ),
                 ],
               ),
@@ -157,7 +160,14 @@ class CreateRecipeScreen extends StatelessWidget {
                   },
                 ),
               ),
-              ElevatedButton(onPressed: ()=>{/*Navigator.push(context, )*/}, 
+              ElevatedButton(onPressed: ()=>{
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const CreateRecipestep2Screen(), // Replace with your destination screen
+                  ),
+                )
+              }, 
               child: 
               Text("next"),
               ),

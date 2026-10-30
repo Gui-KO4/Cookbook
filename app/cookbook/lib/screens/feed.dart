@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
 import '/widgets/recipe.dart';
 import '/widgets/navbar.dart';
+import '/Models/receita.dart';
 
-class Receita {
-  final String nome;
-  final String descricao;
-  final String imgurl;
-  final int tempo;
-  final int rating;
-  const Receita(this.nome, this.descricao,this.imgurl, this.tempo, this.rating);
-}
+
 
 const receitas = [
   Receita("choco", "choco", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7hauW4vMNzNtwh_iBAhpEvFrAzm7tFtXGSkQbh3-QwA&s=10", 4, 5),
