@@ -1,0 +1,1 @@
+//TODO: Criar um widget para shopping list reutilizavel, quando se usar o backend.

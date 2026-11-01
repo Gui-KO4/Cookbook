@@ -1,6 +1,12 @@
-import 'package:cookbook/screens/shoppinglistscreen.dart';
 import 'package:flutter/material.dart';
-import 'mainnavigationscreen.dart';
+// Import Pages
+import 'package:cookbook/screens/feed.dart';
+import 'package:cookbook/screens/mapscreen.dart';
+import 'package:cookbook/screens/shoppinglistscreen.dart';
+import 'package:cookbook/screens/loginscreen.dart';
+import 'package:cookbook/screens/registerscreen.dart';
+import 'package:cookbook/screens/createrecipe.dart';
+import 'package:cookbook/screens/mycookbookscreen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -17,9 +23,14 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => const MainNavigationScreen(),
+        '/': (context) => const FeedScreen(),
+        '/cookbook': (context) => const MyCookbookScreen(),
         '/shopList': (context) => const ShoppingListScreen(),
-        /* '/map': (context) => const MapScreen(), */
+        '/map': (context) => const MapScreen(),
+        '/register': (context) => const RegisterPage(),
+        '/login': (context) => const LoginPage(),
+        '/createRecipeIng': (context) => const CreateRecipeScreen(),
+
       },
     );
   }
