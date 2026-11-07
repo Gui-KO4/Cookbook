@@ -1,6 +1,3 @@
-import 'package:cookbook/screens/feed.dart';
-//import 'package:cookbook/screens/mapscreen.dart';
-//import 'package:cookbook/screens/shoppinglistscreen.dart';
 import 'package:flutter/material.dart';
 
 // Import Pages
