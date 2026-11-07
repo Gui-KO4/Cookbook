@@ -12,8 +12,17 @@ class RegisterPage extends StatefulWidget {
 
 class RegisterForm extends State<RegisterPage> {
   final registerKey = GlobalKey<FormState>();
+  final usernameController = TextEditingController();
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  
 
   @override
+  void dispose(){
+    usernameController.dispose();
+    emailController.dispose();
+    passwordController.dispose();
+  }
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -37,24 +46,25 @@ class RegisterForm extends State<RegisterPage> {
                   ),
                 ],
               ),
-              width: 400,
               height: 100,
               padding: EdgeInsets.all(24),
               alignment: Alignment.topCenter,
               child: Row(
                 children: [
-                  Image.network(
+                  ClipRRect(
+                    borderRadius: BorderRadiusGeometry.circular(16),
+                    child:Image.network(
                     "https://raw.githubusercontent.com/Gui-KO4/Cookbook/main/.github/assets/CookBook_mainlogo.png",
-                    width: 100,
                     height: 120,
+                  ),
                   ),
                   SizedBox(width: 8),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Welcome,", style: TextStyle(fontSize: 12)),
+                      Text("Bem vindo,", style: TextStyle(fontSize: 12)),
                       Text(
-                        "Join CookBook",
+                        "Junte-se ao CookBook",
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
@@ -65,6 +75,7 @@ class RegisterForm extends State<RegisterPage> {
                 ],
               ),
             ),
+
             SizedBox(height: 10),
             Container(
               //Cena do formulario
@@ -80,8 +91,6 @@ class RegisterForm extends State<RegisterPage> {
                   ),
                 ],
               ),
-              width: 400,
-              height: 480,
               padding: EdgeInsets.all(20),
               child: Form(
                 key: registerKey,
@@ -89,6 +98,7 @@ class RegisterForm extends State<RegisterPage> {
                   children: [
                     Text("Username", style: TextStyle(fontSize: 14)),
                     TextFormField(
+                      controller: usernameController,
                       decoration: InputDecoration(
                         hintText: "Escreva o seu username",
                         filled: true,
@@ -97,6 +107,8 @@ class RegisterForm extends State<RegisterPage> {
                           borderRadius: BorderRadius.circular(16),
                           borderSide: BorderSide.none,
                         ),
+                        prefixIcon: Icon(Icons.soup_kitchen_outlined
+                        )
                       ),
                       validator: (valor) {
                         if (valor == null || valor.trim().isEmpty) {
@@ -113,6 +125,8 @@ class RegisterForm extends State<RegisterPage> {
                     SizedBox(height: 4),
 
                     TextFormField(
+                      controller: emailController,
+                      keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                         hintText: "Escreva o seu email",
                         filled: true,
@@ -121,6 +135,7 @@ class RegisterForm extends State<RegisterPage> {
                           borderRadius: BorderRadius.circular(16),
                           borderSide: BorderSide.none,
                         ),
+                        prefixIcon: Icon(Icons.mail_outline_rounded)
                       ),
                       validator: (valor) {
                         if (valor == null || valor.trim().isEmpty) {
@@ -128,9 +143,11 @@ class RegisterForm extends State<RegisterPage> {
                         }
                       },
                     ),
+
                     SizedBox(height: 4),
                     Text("Password", style: TextStyle(fontSize: 14)),
                     TextFormField(
+                      controller: passwordController,
                       decoration: InputDecoration(
                         hintText: "Escreva a sua password",
                         filled: true,
@@ -139,10 +156,10 @@ class RegisterForm extends State<RegisterPage> {
                           borderRadius: BorderRadius.circular(16),
                           borderSide: BorderSide.none,
                         ),
-                        suffixIcon: Icon(Icons.remove_red_eye_outlined),
+                        suffixIcon: Icon(Icons.remove_red_eye_outlined),prefixIcon: Icon(Icons.lock_outlined)
                       ),
                       validator: (valor) {
-                        if (valor == null || valor.trim().isEmpty) {
+                        if (valor == null || valor.isEmpty) {
                           return "escreva a sua password";
                         }
                         if (valor.length < 8) {
@@ -150,20 +167,20 @@ class RegisterForm extends State<RegisterPage> {
                         }
                       },
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 20),
 
                     Container(
                       //container dos botoes
-                      height: 100,
+                      height: 80,
                       alignment: Alignment.center,
                       child: Column(
                         children: [
                           SizedBox(
-                            height: 40,
-                            width: 200,
+                            height: 60,
+                            width: 300,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Color.fromARGB(210, 11, 62, 9),
+                                backgroundColor: const Color.fromARGB(255, 27, 79, 64),
                                 foregroundColor: const Color.fromARGB(
                                   255,
                                   255,
@@ -171,38 +188,55 @@ class RegisterForm extends State<RegisterPage> {
                                   255,
                                 ),
                               ),
-                              onPressed: () =>
-                                  Navigator.pushNamed(context, '/login'),
+                              onPressed: () {
+                                if (registerKey.currentState!.validate()) {
+                                  Navigator.pushNamed(context, '/');
+                                }
+                              },
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   const Text('Criar Conta'),
-                                  SizedBox(width: 10),
-                                  Icon(Icons.person),
+                                  SizedBox(width: 5),
+                                  Icon(Icons.arrow_right_alt),
                                 ],
                               ),
                             ),
                           ),
-                          SizedBox(height: 10),
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.white,
-                              foregroundColor: Colors.black,
-                            ),
-                            onPressed: () {
-                              if (registerKey.currentState!.validate()) {}
-                            },
-                            child: const Text('Continuar como convidado'),
+                              ]
+                            )
                           ),
-                        ],
-                      ),
-                    ),
                   ],
                 ),
               ),
             ),
+             SizedBox(height: 20),
+                          SizedBox(height: 45,
+                          width: 250,                
+                         child: OutlinedButton(
+                            style: OutlinedButton.styleFrom(
+                              backgroundColor: const Color.fromARGB(255, 246, 247, 242),
+                              foregroundColor: Colors.black,
+                              side: BorderSide(color: const Color.fromARGB(255, 189, 189, 189))
+                            ),
+                            //onPressed: () {
+                              //if (registerKey.currentState!.validate()) {}
+                            //},
+                             onPressed: () =>
+                                  Navigator.pushNamed(context, '/'),
+
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const Icon(Icons.person),
+                                 const SizedBox(width: 5),
+                             const Text('Continuar como convidado'),
+                  ]
+                ),
+                      ),
+                    ),
           ],
-        ),
+      ),
       ),
     );
   }

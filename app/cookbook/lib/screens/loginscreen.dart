@@ -37,33 +37,38 @@ class LoginForm extends State<LoginPage> {
                   ),
                 ],
               ),
-              width: 400,
-              height: 100,
-              padding: EdgeInsets.all(24),
+              padding: EdgeInsets.all(20),
               alignment: Alignment.topCenter,
-              child: Row(
+              child: Column(
+                children: [
+              Row(
                 children: [
                   Image.network(
                     "https://raw.githubusercontent.com/Gui-KO4/Cookbook/main/.github/assets/CookBook_mainlogo.png",
-                    width: 100,
-                    height: 120,
+                    height: 100,
+                    width: 100
                   ),
-                  SizedBox(width: 8),
-                  Column(
+                  SizedBox(width: 4),
+                  Expanded(
+                  child:Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Welcome,", style: TextStyle(fontSize: 12)),
                       Text(
-                        "Join CookBook",
+                        "Bem vindo(a) de volta",
                         style: TextStyle(
-                          fontSize: 24, 
+                          fontSize: 22, 
                           fontWeight: FontWeight.bold,
                         ),
                       ),
+
                     ],
+                  ),
                   ),
                 ],
               ),
+            Text("Faça login para aceder as suas receitas",style: TextStyle(fontSize: 14)),
+                ]
+              )
             ),
             SizedBox(height: 10),
             Container(
@@ -80,8 +85,6 @@ class LoginForm extends State<LoginPage> {
                   ),
                 ],
               ),
-              width: 400,
-              height: 320,
               padding: EdgeInsets.all(20),
               child: Form(
                 key: loginKey,
@@ -103,8 +106,8 @@ class LoginForm extends State<LoginPage> {
                         if (valor == null || valor.trim().isEmpty) {
                           return "Escreva o seu username";
                         }
-                        if (valor.length < 3) {
-                          return "O nome tem de ter pelo menos 3 caracteres";
+                        if (valor.isEmpty) {
+                          return "Escreva o seu username";
                         }
                       },
                     ),
@@ -130,20 +133,21 @@ class LoginForm extends State<LoginPage> {
                         }
                       },
                     ),
+
+                    
                     SizedBox(height: 20),
 
                     Container(
                       //container dos botoes
-                      height: 100,
                       alignment: Alignment.center,
                       child: Column(
                         children: [
                           SizedBox(
-                            height: 40,
-                            width: 200,
+                            height: 45,
+                            width: 250,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Color.fromARGB(210, 11, 62, 9),
+                                backgroundColor: Color.fromARGB(255, 27, 79, 64),
                                 foregroundColor: const Color.fromARGB(
                                   255,
                                   255,
@@ -151,8 +155,11 @@ class LoginForm extends State<LoginPage> {
                                   255,
                                 ),
                               ),
-                              onPressed: () =>
-                                  Navigator.pushNamed(context, '/'),
+                              onPressed: () {
+                                if (loginKey.currentState!.validate()) {
+                                  Navigator.pushNamed(context, '/');
+                                }
+                              },
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
@@ -169,7 +176,7 @@ class LoginForm extends State<LoginPage> {
                             onPressed: () {
                               Navigator.pushNamed(context, '/register');
                             },
-                            child: Text("Não tem conta? crie uma",style: TextStyle(decoration: TextDecoration.underline),),
+                            child: Text("Não tem conta? crie uma",style: TextStyle(decoration: TextDecoration.underline)),
                           ),
                         ],
                       ),
