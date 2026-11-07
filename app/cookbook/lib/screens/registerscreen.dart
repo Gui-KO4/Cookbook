@@ -31,7 +31,10 @@ class RegisterForm extends State<RegisterPage> {
       home: Scaffold(
         resizeToAvoidBottomInset: false,
         //Widget la da intro
-        body: Column(
+        body:SafeArea(
+          child: SingleChildScrollView(
+          padding: EdgeInsets.all(24),
+          child:Column(
           children: [
             Container(
               decoration: BoxDecoration(
@@ -46,7 +49,6 @@ class RegisterForm extends State<RegisterPage> {
                   ),
                 ],
               ),
-              height: 100,
               padding: EdgeInsets.all(24),
               alignment: Alignment.topCenter,
               child: Row(
@@ -59,18 +61,20 @@ class RegisterForm extends State<RegisterPage> {
                   ),
                   ),
                   SizedBox(width: 8),
-                  Column(
+                    Expanded(
+                      child:Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text("Bem vindo,", style: TextStyle(fontSize: 12)),
                       Text(
                         "Junte-se ao CookBook",
                         style: TextStyle(
-                          fontSize: 24,
+                          fontSize: 22,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                     ],
+                      )
                   ),
                 ],
               ),
@@ -95,6 +99,7 @@ class RegisterForm extends State<RegisterPage> {
               child: Form(
                 key: registerKey,
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text("Username", style: TextStyle(fontSize: 14)),
                     TextFormField(
@@ -111,11 +116,8 @@ class RegisterForm extends State<RegisterPage> {
                         )
                       ),
                       validator: (valor) {
-                        if (valor == null || valor.trim().isEmpty) {
+                        if (valor == null || valor.isEmpty) {
                           return "Escreva o seu username";
-                        }
-                        if (valor.length < 3) {
-                          return "O nome tem de ter pelo menos 3 caracteres";
                         }
                       },
                     ),
@@ -138,7 +140,7 @@ class RegisterForm extends State<RegisterPage> {
                         prefixIcon: Icon(Icons.mail_outline_rounded)
                       ),
                       validator: (valor) {
-                        if (valor == null || valor.trim().isEmpty) {
+                        if (valor == null || valor.isEmpty) {
                           return "escreva o seu email";
                         }
                       },
@@ -162,16 +164,12 @@ class RegisterForm extends State<RegisterPage> {
                         if (valor == null || valor.isEmpty) {
                           return "escreva a sua password";
                         }
-                        if (valor.length < 8) {
-                          return "Pelo menos 8 caracteres";
-                        }
                       },
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 25),
 
                     Container(
                       //container dos botoes
-                      height: 80,
                       alignment: Alignment.center,
                       child: Column(
                         children: [
@@ -203,6 +201,14 @@ class RegisterForm extends State<RegisterPage> {
                               ),
                             ),
                           ),
+                           SizedBox(height: 12),
+                          TextButton(
+                            style: TextButton.styleFrom(foregroundColor: const Color.fromARGB(255, 27, 79, 64)),
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/login');
+                            },
+                            child: Text("Já tem conta? faça login"),
+                          ),
                               ]
                             )
                           ),
@@ -219,9 +225,6 @@ class RegisterForm extends State<RegisterPage> {
                               foregroundColor: Colors.black,
                               side: BorderSide(color: const Color.fromARGB(255, 189, 189, 189))
                             ),
-                            //onPressed: () {
-                              //if (registerKey.currentState!.validate()) {}
-                            //},
                              onPressed: () =>
                                   Navigator.pushNamed(context, '/'),
 
@@ -238,6 +241,8 @@ class RegisterForm extends State<RegisterPage> {
           ],
       ),
       ),
+    )
+      )
     );
   }
 }

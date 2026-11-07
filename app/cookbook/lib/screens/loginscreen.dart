@@ -22,7 +22,10 @@ class LoginForm extends State<LoginPage> {
       home: Scaffold(
         resizeToAvoidBottomInset: false,
         //Widget la da intro
-        body: Column(
+        body:SafeArea(
+          child:Padding(
+            padding:EdgeInsets.all(24),
+            child:Column(
           children: [
             Container(
               decoration: BoxDecoration(
@@ -89,6 +92,7 @@ class LoginForm extends State<LoginPage> {
               child: Form(
                 key: loginKey,
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text("Username", style: TextStyle(fontSize: 14)),
                     //talvez trocar por email depois
@@ -101,12 +105,10 @@ class LoginForm extends State<LoginPage> {
                           borderRadius: BorderRadius.circular(16),
                           borderSide: BorderSide.none,
                         ),
+                        prefixIcon: Icon(Icons.soup_kitchen_outlined)
                       ),
                       validator: (valor) {
-                        if (valor == null || valor.trim().isEmpty) {
-                          return "Escreva o seu username";
-                        }
-                        if (valor.isEmpty) {
+                        if (valor == null || valor.isEmpty) {
                           return "Escreva o seu username";
                         }
                       },
@@ -122,14 +124,12 @@ class LoginForm extends State<LoginPage> {
                           borderRadius: BorderRadius.circular(16),
                           borderSide: BorderSide.none,
                         ),
+                        prefixIcon: Icon(Icons.lock_outline),
                         suffixIcon: Icon(Icons.remove_red_eye_outlined),
                       ),
                       validator: (valor) {
-                        if (valor == null || valor.trim().isEmpty) {
+                        if (valor == null || valor.isEmpty) {
                           return "escreva a sua password";
-                        }
-                        if (valor.length < 8) {
-                          return "Pelo menos 8 caracteres";
                         }
                       },
                     ),
@@ -181,13 +181,37 @@ class LoginForm extends State<LoginPage> {
                         ],
                       ),
                     ),
-                  ],
+                  ]
+                ),
                 ),
               ),
-            ),
+              SizedBox(height: 10),
+              SizedBox(height: 45,
+                          width: 250,                
+                         child: OutlinedButton(
+                            style: OutlinedButton.styleFrom(
+                              backgroundColor: const Color.fromARGB(255, 246, 247, 242),
+                              foregroundColor: Colors.black,
+                              side: BorderSide(color: const Color.fromARGB(255, 189, 189, 189))
+                            ),
+                             onPressed: () =>
+                                  Navigator.pushNamed(context, '/'),
+
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const Icon(Icons.person),
+                                 const SizedBox(width: 5),
+                             const Text('Continuar como convidado'),
+                              ]
+                         )
+                         ),
+                    )
           ],
+            ),
         ),
       ),
-    );
+    )
+      );
   }
 }
