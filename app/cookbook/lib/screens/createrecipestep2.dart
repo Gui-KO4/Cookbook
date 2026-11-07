@@ -1,28 +1,16 @@
 import 'package:flutter/material.dart';
-import '/widgets/addingrediente.dart';
-import '/widgets/navbar.dart';
 import '/Models/ingredients.dart';
 
+const types = ["arroz", "feijao", "mambo", "rastoz", "cooisa"];
 
+const ingredientes = [Ingrediente("name", "type", true, 4)];
 
-const types = [
-  "arroz",
-  "feijao",
-  "mambo",
-  "rastoz",
-  "cooisa"
-];
-
-const ingredientes = [
-  Ingrediente("name", "type", true, 4)
-];
 class CreateRecipestep2Screen extends StatelessWidget {
   const CreateRecipestep2Screen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-    home: Scaffold(
+    return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -54,7 +42,7 @@ class CreateRecipestep2Screen extends StatelessWidget {
               backgroundColor: const Color(0xFF1B4D3E),
               child: IconButton(
                 padding: EdgeInsets.zero,
-                onPressed: () {},
+                onPressed: () => Navigator.pushNamed(context, '/login'),
                 icon: const Icon(
                   Icons.person_outline,
                   color: Colors.white,
@@ -65,53 +53,47 @@ class CreateRecipestep2Screen extends StatelessWidget {
           ),
         ],
       ),
-      body:
-        Padding(
-          padding: const EdgeInsets.all(12),
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.arrow_back),
-                    onPressed: () {},
-                  ),
-                  Column(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text("Step 2 of 2 ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                          Text("Catalog", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                        ],
-                      ),
-                      const SizedBox(height: 2),
-                      const Text(
-                        "Recipe details",
-                        style: TextStyle(color: Colors.grey, fontSize: 13),
-                      ),
-                    ],
-                  ),
-                  IconButton(
-                    icon: const Icon(Icons.cancel),
-                    onPressed: () => {Navigator.pop(context)},
-                  ),
-                ],
-              ),
-
-              const SizedBox(height: 12),
-
-              
-            ],
-          ),
+      body: Padding(
+        padding: const EdgeInsets.all(12),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.arrow_back),
+                  onPressed: () => Navigator.pop(context),
+                ),
+                const Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Step 2 of 2 ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                        Text("Catalog", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                      ],
+                    ),
+                    SizedBox(height: 2),
+                    Text(
+                      "Recipe details",
+                      style: TextStyle(color: Colors.grey, fontSize: 13),
+                    ),
+                  ],
+                ),
+                IconButton(
+                  icon: const Icon(Icons.cancel),
+                  onPressed: () => Navigator.pop(context),
+                ),
+              ],
+            ),
+            const SizedBox(height: 12),
+          ],
         ),
-        bottomNavigationBar: buildCookBookBottomNav(context, 1),
-       )
+      ),
     );
   }
 }

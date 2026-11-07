@@ -1,33 +1,9 @@
 import 'package:flutter/material.dart';
 
-Widget buildCookBookBottomNav(
-  BuildContext context,
-  int currentIndex, {
-  ValueChanged<int>? onTap,
+Widget buildCookBookBottomNav({
+  required int currentIndex,
+  required ValueChanged<int> onTap,
 }) {
-  void handleNavigation(int index) {
-    if (index == currentIndex) return;
-    if (onTap != null) {
-      onTap(index);
-      return;
-    }
-
-    switch (index) {
-      case 0:
-        Navigator.pushReplacementNamed(context, '/');
-        break;
-      case 1:
-        Navigator.pushReplacementNamed(context, '/CreateRecipeIng');
-        break;
-      case 2:
-        Navigator.pushReplacementNamed(context, '/shopList');
-        break;
-      case 3:
-        // Navigator.pushReplacementNamed(context, '/map');
-        break;
-    }
-  }
-
   Widget navItem(IconData icon, String label, int index) {
     const activeColor = Color(0xFF0A3828);
     const inactiveColor = Color(0xFF4A5550);
@@ -41,7 +17,7 @@ Widget buildCookBookBottomNav(
           borderRadius: BorderRadius.circular(30),
           splashColor: activeColor.withValues(alpha: 0.15),
           highlightColor: activeColor.withValues(alpha: 0.08),
-          onTap: () => handleNavigation(index),
+          onTap: () => onTap(index),
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
             child: Column(
