@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/recipe.dart';
-
 void main() => runApp(const RegisterPage());
 
 class RegisterPage extends StatefulWidget {

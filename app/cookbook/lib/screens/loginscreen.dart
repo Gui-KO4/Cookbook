@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/recipe.dart';
-
 void main() => runApp(const LoginPage());
 
 class LoginPage extends StatefulWidget {
