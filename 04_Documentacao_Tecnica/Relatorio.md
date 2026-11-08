@@ -467,9 +467,63 @@ A arquitetura baseia-se numa abordagem cliente-servidor: a aplicação móvel (c
 ### Guia de dados (BD exemplo)
 <!-- TODO (2ª entrega): esboço da estrutura dos dados de exemplo do populate.sql (quantos utilizadores, receitas, ingredientes, etc.). -->
 
-### BD Report
+## BD Report
 <!-- TODO (2ª entrega): capítulo que descreve a BD do projeto e os dados de exemplo. Ficheiros no GitHub: create.sql, populate.sql, queries.sql. -->
+### Entidades Principais:
 
+- Utilizadores: 
+    Armazena as credenciais e os dados de perfil dos utilizadores da aplicação.
+
+- Receitas: 
+    Armazena os dados de cada receita.
+
+- Ingrediente:
+    Catálogo de ingredientes que a base de dados tem disponíveis. Serve de base tanto para as receitas como para as listas de compras.
+
+- Categoria:
+    Agrupamentos para classificar as receitas. Permite também o filtro por categoria.
+
+### Entidades Associativas
+
+- Passo: 
+    Guarda o passo e a ordem de preparação da receita.
+
+- ListaIngredientes:
+    Associa os ingredientes a uma receita, definindo as quantidades de cada um.
+
+- Receita_Categoria:
+    Permite que uma receita pertença a várias categorias e que uma categoria tenha várias receitas.
+
+- Avaliações:
+    Permite que os utilizadores façam availiações às receitas de outros utilizadores.
+
+- Favoritos:
+    Regista as receitas que os utilizadores marcaram como favoritas.
+
+- ListaCompras e ComprasItems:
+    Gerem a lista de compras de cada utilizador e os respetivos ingredientes que o utilizador lá meter.
+
+- Coleção e Coleção_Receita:
+    Permite aos utilizadores agrupar receitas por coleções personalizadas.
+
+
+## Chaves Primárias e Estrangeiras
+
+- Chaves Primárias: 
+    As Entidades principais e as Entidades "Avaliações", "Passo", "ListaCompras", "Coleção" e "ComprasItems" usam chaves primárias para garantir identificadores únicos.(id_utilizador, id_receita, id_ingrediente, id_avaliacao, id_passo, id_lista, id_colecao, id_item)
+
+- Chaves Estrangeiras:
+    Várias entidades utilizam chaves estrangeiras que referenciam outras entidades:
+        Receita utiliza a chave estrangeira "id_author", que referencia a entidade Utilizador(id_author = id_utilizador);
+        Passo utiliza a chave estrangeira "id_receita", que referencia a a entidade Receita;
+        ListaIngredientes utiliza as chaves estrangeiras "id_receita" e "id_ingrediente", que referenciam as entidades Receita e Ingrediente;
+        Receita_Categoria utiliza as chaves estrangeiras "id_receita" e "id_categoria", que referenciam as entidades Receita e Categoria;
+        Avalições utiliza as chaves estrangeiras "id_utilizador" e "id_receita", que referenciam as entidades Utilizador e Receita;
+        Favoritos utiliza as chaves estrageiras "id_utilizador" e "id_receita", que referenciam as entidades Utilizador e Receita;
+        Coleção utiliza a chave estrangeira "id_utilizador", que referencia a entidade Utilizador;
+        Coleção_Receitas utiliza as chaves estrangeiras "id_colecao" e "id_receita", que referenciam as entidades Coleção e Receita;
+        ListaCompras utiliza a chave estrangeira "id_utilizador", que referencia a entidade Utilizador;
+        ComprasItems utiliza as chaves estrangeiras "id_lista" e "id_ingrediente", que referenciam as entidades ListaCompras e Ingrediente;
 ---
 
 ## 15. Documentação REST
