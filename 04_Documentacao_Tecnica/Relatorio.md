@@ -507,7 +507,7 @@ A arquitetura baseia-se numa abordagem cliente-servidor: a aplicação móvel (c
     Permite aos utilizadores agrupar receitas por coleções personalizadas.
 
 
-## Chaves Primárias e Estrangeiras
+### Chaves Primárias e Estrangeiras
 
 - Chaves Primárias: 
     As Entidades principais e as Entidades "Avaliações", "Passo", "ListaCompras", "Coleção" e "ComprasItems" usam chaves primárias para garantir identificadores únicos.(id_utilizador, id_receita, id_ingrediente, id_avaliacao, id_passo, id_lista, id_colecao, id_item)
