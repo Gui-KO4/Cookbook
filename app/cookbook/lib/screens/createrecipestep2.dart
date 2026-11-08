@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../Models/ingredients_models.dart';
+import '/Models/ingredients_models.dart';
 
-const types = ["arroz", "feijao", "mambo", "rastoz", "cooisa"];
+const types = ["arroz", "feijao", "mambo", "cena", "cooisa"];
 
 const ingredientes = [Ingrediente("name", "type", true, 4)];
 

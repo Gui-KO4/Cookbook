@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '/widgets/addingrediente.dart';
-import '../Models/ingredients_models.dart';
+import '/Models/ingredients_models.dart';
 import 'createrecipestep2.dart';
 
 const types = ["arroz", "feijao", "mambo", "rastoz", "cooisa"];

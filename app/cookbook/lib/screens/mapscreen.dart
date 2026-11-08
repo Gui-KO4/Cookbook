@@ -123,7 +123,7 @@ class _MapScreenState extends State<MapScreen> {
                               options: MapOptions(
                                 initialCenter: _initialCenter,
                                 initialZoom: 14.0,
-                                onTap: (_, __) {
+                                onTap: (_, _) {
                                   if (_selectedPlace != null) {
                                     setState(() => _selectedPlace = null);
                                   }

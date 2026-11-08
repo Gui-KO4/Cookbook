@@ -20,8 +20,6 @@ class ShoppingListController {
         return data
             .map((item) => ShoppingItem.fromJson(item as Map<String, dynamic>))
             .toList();
-      } else {
-        debugPrint('Error fetching shopping list: ${response.statusCode}');
       }
     } catch (e) {
       debugPrint('Failed to fetch shopping list: $e');
@@ -29,7 +27,7 @@ class ShoppingListController {
     return [];
   }
 
-  Future<bool> addShoppingItem({
+  Future<bool> addOrUpdateItem({
     required int userId,
     required int ingredientId,
     required double quantity,
@@ -47,12 +45,27 @@ class ShoppingListController {
       );
       return response.statusCode == 201 || response.statusCode == 200;
     } catch (e) {
-      debugPrint('Failed to add shopping item: $e');
+      debugPrint('Failed to add/update item: $e');
       return false;
     }
   }
 
-  Future<bool> toggleShoppingItem(int itemId, bool isChecked) async {
+  Future<bool> updateItemQuantity(int itemId, double quantity) async {
+    final url = Uri.parse('$baseUrl/shopping-list/$itemId');
+    try {
+      final response = await http.patch(
+        url,
+        headers: {'Content-Type': 'application/json'},
+        body: jsonEncode({'quantidade': quantity}),
+      );
+      return response.statusCode == 200;
+    } catch (e) {
+      debugPrint('Failed to update quantity: $e');
+      return false;
+    }
+  }
+
+  Future<bool> toggleItem(int itemId, bool isChecked) async {
     final url = Uri.parse('$baseUrl/shopping-list/$itemId');
     try {
       final response = await http.patch(
@@ -67,13 +80,24 @@ class ShoppingListController {
     }
   }
 
-  Future<bool> deleteShoppingItem(int itemId) async {
+  Future<bool> deleteItem(int itemId) async {
     final url = Uri.parse('$baseUrl/shopping-list/$itemId');
     try {
       final response = await http.delete(url);
       return response.statusCode == 200;
     } catch (e) {
       debugPrint('Failed to delete item: $e');
+      return false;
+    }
+  }
+
+  Future<bool> clearList(int userId) async {
+    final url = Uri.parse('$baseUrl/shopping-list/clear/$userId');
+    try {
+      final response = await http.delete(url);
+      return response.statusCode == 200;
+    } catch (e) {
+      debugPrint('Failed to clear list: $e');
       return false;
     }
   }
