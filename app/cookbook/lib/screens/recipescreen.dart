@@ -36,7 +36,7 @@ class Recipescreen extends StatefulWidget {
       Future<void> _fetchRecipeTest() async {
           try {
             // Adjust the URL/port if running on a physical device vs emulator (e.g., 10.0.2.2 for Android emulator)
-              final response = await http.get(Uri.parse('http://10.0.2.2:3000/api/ingredients'));
+              final response = await http.get(Uri.parse('http://localhost:3000/api/recipes'));
 
             if (response.statusCode == 200) {
               setState(() {
@@ -97,7 +97,38 @@ class Recipescreen extends StatefulWidget {
                   );
                 },
               ),
-            )
+            ),
+             Expanded(
+            child: _isLoading
+                ? const Center(child: CircularProgressIndicator())
+                : _errorMessage.isNotEmpty
+                    ? Center(child: Text(_errorMessage, style: const TextStyle(color: Colors.red)))
+                    : _dbIngredients.isEmpty
+                        ? const Center(child: Text('Nenhum ingrediente encontrado na DB.'))
+                        : ListView.builder(
+                            itemCount: _dbIngredients.length,
+                            itemBuilder: (context, index) {
+                              final ingredient = _dbIngredients[index];
+                              return Card(
+                                margin: const EdgeInsets.only(bottom: 8.0),
+                                child: ListTile(
+                                  leading: CircleAvatar(
+                                    backgroundColor: const Color(0xFF1B4D3E),
+                                    child: Text(
+                                      ingredient['id_receita'].toString(),
+                                      style: const TextStyle(color: Colors.white, fontSize: 12),
+                                    ),
+                                  ),
+                                  title: Text(
+                                    ingredient['titulo'] ?? 'Sem nome',
+                                    style: const TextStyle(fontWeight: FontWeight.w600),
+                                  ),
+                               
+                                ),
+                              );
+                            },
+                          ),
+             )
             
           ],
         )

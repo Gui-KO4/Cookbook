@@ -4,10 +4,10 @@ require('dotenv').config();
 const express = require('express');
 const pool = require('./config/db');
 
-
 const app = express();
 const PORT = 3000; 
 
+// CORS used to allow running in web.
 const cors = require('cors'); 
 app.use(cors()); 
 
@@ -33,4 +33,3 @@ async function startServer() {
 }
 
 startServer();
-
