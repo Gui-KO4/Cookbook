@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '/Models/ingredients.dart';
+import '../Models/ingredients_models.dart';
 
 const types = ["arroz", "feijao", "mambo", "rastoz", "cooisa"];
 
