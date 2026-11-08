@@ -9,7 +9,11 @@ const PORT = 3000;
 
 // CORS used to allow running in web.
 const cors = require('cors'); 
-app.use(cors()); 
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 app.use(express.json());
 

@@ -30,5 +30,22 @@ class Receita {
     this.passos = const [],
   });
 
-  
+  factory Receita.fromJson(Map<String, dynamic> json) {
+    return Receita(
+      id: json['id_receita'] ?? json['id'] ?? 0,
+      idAutor: json['id_autor'] ?? json['idAutor'] ?? 0,
+      titulo: json['titulo'] ?? '',
+      descricao: json['descricao'] ?? '',
+      tempoPreparacao: json['tempo_preparacao'] ?? json['tempoPreparacao'] ?? 0,
+      tempoForno: json['tempo_forno'] ?? json['tempoForno'] ?? 0,
+      dificuldade: json['dificuldade'] ?? '',
+      visibilidade: json['visibilidade'] ?? '',
+      foto: json['foto'] ?? '',
+      dataCriacao: json['data_criacao'] != null 
+          ? DateTime.parse(json['data_criacao'].toString()) 
+          : DateTime.now(),
+      ingredientes: [],
+      passos: [],
+    );
+  }
 }

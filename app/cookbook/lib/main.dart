@@ -53,7 +53,6 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
     MyCookbookScreen(),
     ShoppingListScreen(),
     MapScreen(),
-    Recipescreen(),
   ];
 
   @override
