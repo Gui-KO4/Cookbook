@@ -11,6 +11,7 @@ import 'package:cookbook/screens/loginscreen.dart';
 import 'package:cookbook/screens/registerscreen.dart';
 import 'package:cookbook/screens/createrecipe.dart';
 import 'package:cookbook/screens/mycookbookscreen.dart';
+import 'package:cookbook/screens/recipescreen.dart';
 import 'package:cookbook/widgets/navbar.dart';
 
 void main() => runApp(const MyApp());
@@ -52,6 +53,7 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
     MyCookbookScreen(),
     ShoppingListScreen(),
     MapScreen(),
+    Recipescreen(),
   ];
 
   @override

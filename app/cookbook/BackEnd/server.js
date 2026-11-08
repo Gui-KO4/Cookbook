@@ -4,10 +4,17 @@ require('dotenv').config();
 const express = require('express');
 const pool = require('./config/db');
 
+
 const app = express();
 const PORT = 3000; 
 
+const cors = require('cors'); 
+app.use(cors()); 
+
 app.use(express.json());
+
+const recipeRoutes = require('./routes/recipe_route');
+app.use('/api/recipes', recipeRoutes);
 
 
 // Start server only if DB connection succeeds

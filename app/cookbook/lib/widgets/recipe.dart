@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-
+import 'package:cookbook/main.dart';
+import 'package:cookbook/screens/recipescreen.dart';
 class RecipeCard extends StatelessWidget {
   final String name;
   final String details;
   final String imgurl;
   final int time;
-  final int rating;
+  final String dificuldade;
 
   const RecipeCard({
     super.key,
@@ -14,13 +15,21 @@ class RecipeCard extends StatelessWidget {
     required this.details,
     required this.imgurl,
     required this.time,
-    required this.rating,
+    required this.dificuldade,
   });
 
   @override
   Widget build(BuildContext context) {
     return Card.outlined(
       elevation: 2, 
+      child: 
+      InkWell(
+      onTap: (){
+         Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => Recipescreen()),
+        );
+      },
       child: 
         SizedBox(
           width: 400,
@@ -71,6 +80,7 @@ class RecipeCard extends StatelessWidget {
               ],
             ),
         )
+      )
     );
   }
 }
