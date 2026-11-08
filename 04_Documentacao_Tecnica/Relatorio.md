@@ -513,17 +513,17 @@ A arquitetura baseia-se numa abordagem cliente-servidor: a aplicação móvel (c
     As Entidades principais e as Entidades "Avaliações", "Passo", "ListaCompras", "Coleção" e "ComprasItems" usam chaves primárias para garantir identificadores únicos.(id_utilizador, id_receita, id_ingrediente, id_avaliacao, id_passo, id_lista, id_colecao, id_item)
 
 - Chaves Estrangeiras:
-    Várias entidades utilizam chaves estrangeiras que referenciam outras entidades:
-        Receita: utiliza a chave estrangeira "id_author", que referencia a entidade Utilizador(id_author = id_utilizador)  
-        Passo: utiliza a chave estrangeira "id_receita", que referencia a a entidade Receita  
-        ListaIngredientes: utiliza as chaves estrangeiras "id_receita" e "id_ingrediente", que referenciam as entidades Receita e Ingrediente  
-        Receita_Categoria: utiliza as chaves estrangeiras "id_receita" e "id_categoria", que referenciam as entidades Receita e Categoria  
-        Avalições: utiliza as chaves estrangeiras "id_utilizador" e "id_receita", que referenciam as entidades Utilizador e Receita  
-        Favoritos: utiliza as chaves estrageiras "id_utilizador" e "id_receita", que referenciam as entidades Utilizador e Receita  
-        Coleção: utiliza a chave estrangeira "id_utilizador", que referencia a entidade Utilizador  
-        Coleção_Receitas: utiliza as chaves estrangeiras "id_colecao" e "id_receita", que referenciam as entidades Coleção e Receita  
-        ListaCompras: utiliza a chave estrangeira "id_utilizador", que referencia a entidade Utilizador  
-        ComprasItems: utiliza as chaves estrangeiras "id_lista" e "id_ingrediente", que referenciam as entidades ListaCompras e Ingrediente  
+    Várias entidades utilizam chaves estrangeiras que referenciam outras entidades:  
+        - Receita: utiliza a chave estrangeira "id_author", que referencia a entidade Utilizador(id_author = id_utilizador)  
+        - Passo: utiliza a chave estrangeira "id_receita", que referencia a a entidade Receita  
+        - ListaIngredientes: utiliza as chaves estrangeiras "id_receita" e "id_ingrediente", que referenciam as entidades Receita e Ingrediente  
+        - Receita_Categoria: utiliza as chaves estrangeiras "id_receita" e "id_categoria", que referenciam as entidades Receita e Categoria  
+        - Avalições: utiliza as chaves estrangeiras "id_utilizador" e "id_receita", que referenciam as entidades Utilizador e Receita  
+        - Favoritos: utiliza as chaves estrageiras "id_utilizador" e "id_receita", que referenciam as entidades Utilizador e Receita  
+        - Coleção: utiliza a chave estrangeira "id_utilizador", que referencia a entidade Utilizador  
+        - Coleção_Receitas: utiliza as chaves estrangeiras "id_colecao" e "id_receita", que referenciam as entidades Coleção e Receita  
+        - ListaCompras: utiliza a chave estrangeira "id_utilizador", que referencia a entidade Utilizador  
+        - ComprasItems: utiliza as chaves estrangeiras "id_lista" e "id_ingrediente", que referenciam as entidades ListaCompras e Ingrediente  
 ---
 
 ## 15. Documentação REST
