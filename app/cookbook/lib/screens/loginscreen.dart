@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/recipe.dart';
-
 void main() => runApp(const LoginPage());
 
 class LoginPage extends StatefulWidget {
@@ -22,7 +20,10 @@ class LoginForm extends State<LoginPage> {
       home: Scaffold(
         resizeToAvoidBottomInset: false,
         //Widget la da intro
-        body: Column(
+        body:SafeArea(
+          child:Padding(
+            padding:EdgeInsets.all(24),
+            child:Column(
           children: [
             Container(
               decoration: BoxDecoration(
@@ -37,33 +38,38 @@ class LoginForm extends State<LoginPage> {
                   ),
                 ],
               ),
-              width: 400,
-              height: 100,
-              padding: EdgeInsets.all(24),
+              padding: EdgeInsets.all(20),
               alignment: Alignment.topCenter,
-              child: Row(
+              child: Column(
+                children: [
+              Row(
                 children: [
                   Image.network(
                     "https://raw.githubusercontent.com/Gui-KO4/Cookbook/main/.github/assets/CookBook_mainlogo.png",
-                    width: 100,
-                    height: 120,
+                    height: 100,
+                    width: 100
                   ),
-                  SizedBox(width: 8),
-                  Column(
+                  SizedBox(width: 4),
+                  Expanded(
+                  child:Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Welcome,", style: TextStyle(fontSize: 12)),
                       Text(
-                        "Join CookBook",
+                        "Bem vindo(a) de volta",
                         style: TextStyle(
-                          fontSize: 24, 
+                          fontSize: 22, 
                           fontWeight: FontWeight.bold,
                         ),
                       ),
+
                     ],
+                  ),
                   ),
                 ],
               ),
+            Text("Faça login para aceder as suas receitas",style: TextStyle(fontSize: 14)),
+                ]
+              )
             ),
             SizedBox(height: 10),
             Container(
@@ -80,12 +86,11 @@ class LoginForm extends State<LoginPage> {
                   ),
                 ],
               ),
-              width: 400,
-              height: 320,
               padding: EdgeInsets.all(20),
               child: Form(
                 key: loginKey,
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text("Username", style: TextStyle(fontSize: 14)),
                     //talvez trocar por email depois
@@ -98,14 +103,13 @@ class LoginForm extends State<LoginPage> {
                           borderRadius: BorderRadius.circular(16),
                           borderSide: BorderSide.none,
                         ),
+                        prefixIcon: Icon(Icons.soup_kitchen_outlined)
                       ),
                       validator: (valor) {
-                        if (valor == null || valor.trim().isEmpty) {
+                        if (valor == null || valor.isEmpty) {
                           return "Escreva o seu username";
                         }
-                        if (valor.length < 3) {
-                          return "O nome tem de ter pelo menos 3 caracteres";
-                        }
+                        return null;
                       },
                     ),
                     SizedBox(height: 4),
@@ -119,31 +123,31 @@ class LoginForm extends State<LoginPage> {
                           borderRadius: BorderRadius.circular(16),
                           borderSide: BorderSide.none,
                         ),
+                        prefixIcon: Icon(Icons.lock_outline),
                         suffixIcon: Icon(Icons.remove_red_eye_outlined),
                       ),
                       validator: (valor) {
-                        if (valor == null || valor.trim().isEmpty) {
+                        if (valor == null || valor.isEmpty) {
                           return "escreva a sua password";
                         }
-                        if (valor.length < 8) {
-                          return "Pelo menos 8 caracteres";
-                        }
+                        return null;
                       },
                     ),
+
+                    
                     SizedBox(height: 20),
 
                     Container(
                       //container dos botoes
-                      height: 100,
                       alignment: Alignment.center,
                       child: Column(
                         children: [
                           SizedBox(
-                            height: 40,
-                            width: 200,
+                            height: 45,
+                            width: 250,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Color.fromARGB(210, 11, 62, 9),
+                                backgroundColor: Color.fromARGB(255, 27, 79, 64),
                                 foregroundColor: const Color.fromARGB(
                                   255,
                                   255,
@@ -151,8 +155,11 @@ class LoginForm extends State<LoginPage> {
                                   255,
                                 ),
                               ),
-                              onPressed: () =>
-                                  Navigator.pushNamed(context, '/'),
+                              onPressed: () {
+                                if (loginKey.currentState!.validate()) {
+                                  Navigator.pushNamed(context, '/');
+                                }
+                              },
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
@@ -169,18 +176,42 @@ class LoginForm extends State<LoginPage> {
                             onPressed: () {
                               Navigator.pushNamed(context, '/register');
                             },
-                            child: Text("Não tem conta? crie uma",style: TextStyle(decoration: TextDecoration.underline),),
+                            child: Text("Não tem conta? crie uma",style: TextStyle(decoration: TextDecoration.underline)),
                           ),
                         ],
                       ),
                     ),
-                  ],
+                  ]
+                ),
                 ),
               ),
-            ),
+              SizedBox(height: 10),
+              SizedBox(height: 45,
+                          width: 250,                
+                         child: OutlinedButton(
+                            style: OutlinedButton.styleFrom(
+                              backgroundColor: const Color.fromARGB(255, 246, 247, 242),
+                              foregroundColor: Colors.black,
+                              side: BorderSide(color: const Color.fromARGB(255, 189, 189, 189))
+                            ),
+                             onPressed: () =>
+                                  Navigator.pushNamed(context, '/'),
+
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const Icon(Icons.person),
+                                 const SizedBox(width: 5),
+                             const Text('Continuar como convidado'),
+                              ]
+                         )
+                         ),
+                    )
           ],
+            ),
         ),
       ),
-    );
+    )
+      );
   }
 }
