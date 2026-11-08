@@ -337,9 +337,9 @@ A arquitetura baseia-se numa abordagem cliente-servidor: a aplicação móvel (c
 
 <!-- TODO: o RF03 (sugestão por validade) exige uma tabela de despensa (ex.: Despensa: id_utilizador, id_ingrediente, quantidade, data_validade). O RF05 refere comentários, que ainda não têm tabela (ex.: Comentarios). Atualizar o ER e o create.sql. -->
 
-### Dicionário de dados
+## Dicionário de dados
 
- ## Utilizador
+ ### Utilizador
 
 | Coluna | Tipo |
 |---|---|
@@ -353,7 +353,7 @@ A arquitetura baseia-se numa abordagem cliente-servidor: a aplicação móvel (c
 | admin_check | BOOLEAN |
 | data_registo | DATETIME |
 
-## Receitas
+### Receitas
 
 | Coluna | Tipo |
 |---|---|
@@ -368,7 +368,7 @@ A arquitetura baseia-se numa abordagem cliente-servidor: a aplicação móvel (c
 | foto | VARCHAR(500) |
 | data_criacao | DATETIME |
 
-## Passo
+### Passo
 
 | Coluna | Tipo |
 |---|---|
@@ -378,14 +378,14 @@ A arquitetura baseia-se numa abordagem cliente-servidor: a aplicação móvel (c
 | instrucoes | TEXT |
 | duracao_min | INT |
 
-## Ingrediente
+### Ingrediente
 
 | Coluna | Tipo |
 |---|---|
 | id_ingrediente (PK) | INT |
 | nome | VARCHAR(100) |
 
-## ListaIngredientes
+### ListaIngredientes
 
 | Coluna | Tipo |
 |---|---|
@@ -395,21 +395,21 @@ A arquitetura baseia-se numa abordagem cliente-servidor: a aplicação móvel (c
 | unidade | VARCHAR(30) |
 | nota | VARCHAR(150) |
 
-## Categoria
+### Categoria
 
 | Coluna | Tipo |
 |---|---|
 | id_categoria (PK) | INT |
 | nome | VARCHAR(80) |
 
-## Receita_Categoria
+### Receita_Categoria
 
 | Coluna | Tipo |
 |---|---|
 | id_receita (PK,FK) | INT | 
 | id_categoria (PK,FK) | INT |
 
-## Avaliacoes
+### Avaliacoes
 
 | Coluna | Tipo |
 |---|---|
@@ -419,7 +419,7 @@ A arquitetura baseia-se numa abordagem cliente-servidor: a aplicação móvel (c
 | classificacao | INT |
 | data | DATETIME |
 
-## Favoritos
+### Favoritos
 
 | Coluna | Tipo |
 |---|---|
@@ -427,7 +427,7 @@ A arquitetura baseia-se numa abordagem cliente-servidor: a aplicação móvel (c
 | id_receita (FK) | INT |
 | data_added | DATETIME |
 
-## Colecao
+### Colecao
 
 | Coluna | Tipo |
 |---|---|
@@ -436,14 +436,14 @@ A arquitetura baseia-se numa abordagem cliente-servidor: a aplicação móvel (c
 | nome | VARCHAR(100) |
 | data_criacao | DATETIME |
 
-## Colecao_Receitas
+### Colecao_Receitas
 
 | Coluna | Tipo |
 |---|---|
 | id_colecao (PK) | INT |
 | id_receita (FK) | INT |
 
-## ListaCompras
+### ListaCompras
 
 | Coluna | Tipo |
 |---|---|
@@ -451,7 +451,7 @@ A arquitetura baseia-se numa abordagem cliente-servidor: a aplicação móvel (c
 | id_utilizador (FK) | INT |
 | data_criacao | DATETIME |
 
-## ComprasItems
+### ComprasItems
 
 | Coluna | Tipo |
 |---|---|
