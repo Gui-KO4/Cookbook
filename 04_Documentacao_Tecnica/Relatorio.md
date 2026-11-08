@@ -338,6 +338,130 @@ A arquitetura baseia-se numa abordagem cliente-servidor: a aplicação móvel (c
 <!-- TODO: o RF03 (sugestão por validade) exige uma tabela de despensa (ex.: Despensa: id_utilizador, id_ingrediente, quantidade, data_validade). O RF05 refere comentários, que ainda não têm tabela (ex.: Comentarios). Atualizar o ER e o create.sql. -->
 
 ### Dicionário de dados
+
+ ## Utilizador
+
+| Coluna | Tipo |
+|---|---|
+| id_utilizador (PK) | INT |
+| nome | VARCHAR(100) |
+| username | VARCHAR(50) |
+| email | VARCHAR(150) |
+| password_hash | VARCHAR(255) |
+| foto | VARCHAR(500) |
+| bio | TEXT |
+| admin_check | BOOLEAN |
+| data_registo | DATETIME |
+
+## Receitas
+
+| Coluna | Tipo |
+|---|---|
+| id_receita (PK) | INT |
+| id_autor (FK) | INT |
+| titulo | VARCHAR(150) |
+| descricao | TEXT |
+| tempo_preparacao | INT |
+| tempo_forno | INT |
+| dificuldade | ENUM |
+| visibilidade | ENUM |
+| foto | VARCHAR(500) |
+| data_criacao | DATETIME |
+
+## Passo
+
+| Coluna | Tipo |
+|---|---|
+| id_passo (PK) | INT |
+| id_receita (FK) | INT |
+| ordem | INT |
+| instrucoes | TEXT |
+| duracao_min | INT |
+
+## Ingrediente
+
+| Coluna | Tipo |
+|---|---|
+| id_ingrediente (PK) | INT |
+| nome | VARCHAR(100) |
+
+## ListaIngredientes
+
+| Coluna | Tipo |
+|---|---|
+| id_receita (PK, FK) | INT |
+| id_ingrediente (PK, FK) | INT |
+| quantidade | DECIMAL(10,2) |
+| unidade | VARCHAR(30) |
+| nota | VARCHAR(150) |
+
+## Categoria
+
+| Coluna | Tipo |
+|---|---|
+| id_categoria (PK) | INT |
+| nome | VARCHAR(80) |
+
+## Receita_Categoria
+
+| Coluna | Tipo |
+|---|---|
+| id_receita (PK,FK) | INT | 
+| id_categoria (PK,FK) | INT |
+
+## Avaliacoes
+
+| Coluna | Tipo |
+|---|---|
+| id_avaliacao (PK) | INT |
+| id_utilizador (FK) | INT |
+| id_receita (FK) | INT |
+| classificacao | INT |
+| data | DATETIME |
+
+## Favoritos
+
+| Coluna | Tipo |
+|---|---|
+| id_utilizador (FK) | INT |
+| id_receita (FK) | INT |
+| data_added | DATETIME |
+
+## Colecao
+
+| Coluna | Tipo |
+|---|---|
+| id_colecao (PK) | INT |
+| id_utilizador (FK) | INT |
+| nome | VARCHAR(100) |
+| data_criacao | DATETIME |
+
+## Colecao_Receitas
+
+| Coluna | Tipo |
+|---|---|
+| id_colecao (PK) | INT |
+| id_receita (FK) | INT |
+
+## ListaCompras
+
+| Coluna | Tipo |
+|---|---|
+| id_lista (PK) | INT |
+| id_utilizador (FK) | INT |
+| data_criacao | DATETIME |
+
+## ComprasItems
+
+| Coluna | Tipo |
+|---|---|
+| id_item (PK) | INT |
+| id_lista (FK) | INT |
+| id_ingrediente (FK) | INT |
+| quantidade | DECIMAL |
+| check_comprado | BOOLEAN |
+
+---
 <!-- TODO (2ª entrega): para cada tabela, descrever atributo, tipo, restrições (PK, FK, UNIQUE, NOT NULL, DEFAULT) e descrição. -->
 
 ### Guia de dados (BD exemplo)
