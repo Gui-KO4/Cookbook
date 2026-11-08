@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/recipe.dart';
-
 void main() => runApp(const RegisterPage());
 
 class RegisterPage extends StatefulWidget {
@@ -18,11 +16,6 @@ class RegisterForm extends State<RegisterPage> {
   
 
   @override
-  void dispose(){
-    usernameController.dispose();
-    emailController.dispose();
-    passwordController.dispose();
-  }
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -119,6 +112,7 @@ class RegisterForm extends State<RegisterPage> {
                         if (valor == null || valor.isEmpty) {
                           return "Escreva o seu username";
                         }
+                        return null;
                       },
                     ),
                     SizedBox(height: 4),
@@ -143,6 +137,7 @@ class RegisterForm extends State<RegisterPage> {
                         if (valor == null || valor.isEmpty) {
                           return "escreva o seu email";
                         }
+                        return null;
                       },
                     ),
 
@@ -164,6 +159,7 @@ class RegisterForm extends State<RegisterPage> {
                         if (valor == null || valor.isEmpty) {
                           return "escreva a sua password";
                         }
+                        return null;
                       },
                     ),
                     SizedBox(height: 25),

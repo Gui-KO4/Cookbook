@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/recipe.dart';
-
 void main() => runApp(const LoginPage());
 
 class LoginPage extends StatefulWidget {
@@ -111,6 +109,7 @@ class LoginForm extends State<LoginPage> {
                         if (valor == null || valor.isEmpty) {
                           return "Escreva o seu username";
                         }
+                        return null;
                       },
                     ),
                     SizedBox(height: 4),
@@ -131,6 +130,7 @@ class LoginForm extends State<LoginPage> {
                         if (valor == null || valor.isEmpty) {
                           return "escreva a sua password";
                         }
+                        return null;
                       },
                     ),
 
