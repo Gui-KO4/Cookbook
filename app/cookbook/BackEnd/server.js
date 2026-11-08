@@ -9,6 +9,17 @@ const PORT = 3000;
 
 app.use(express.json());
 
+// Import routes
+const ingredientRoutes = require('./routes/ingredients_routes');
+const shoppingRoutes = require('./routes/shopping_list_routes');
+
+// API Endpoints
+app.use('/api/ingredients', ingredientRoutes);
+app.use('/api/shopping-list', shoppingRoutes);
+
+// CORS used to allow running in web.
+const cors = require('cors'); 
+app.use(cors()); 
 
 // Start server only if DB connection succeeds
 async function startServer() {
