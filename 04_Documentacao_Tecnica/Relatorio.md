@@ -530,6 +530,54 @@ A arquitetura baseia-se numa abordagem cliente-servidor: a aplicação móvel (c
 
 <!-- TODO (2ª entrega): primeira versão no formato https://bocoup.com/blog/documenting-your-api
 Para cada endpoint: título, URL, método, parâmetros (URL e dados), resposta de sucesso, resposta de erro, exemplo de chamada, notas. -->
+**URL base:** `http://<IP do servidor>:3000`
+
+**Obter todas as receitas**
+* **URL / Método:** `/recipes` · `GET`
+* **Resposta de Sucesso:** `200` `[{"id": 1, "titulo": "Salada de Tomate", "instrucoes": "Cortar o tomate e temperar com azeite."}]`
+* **Resposta de Erro:** `500` `{"msg": "Failed to get recipes", "error": "Descrição do erro da base de dados"}`
+
+**Obter uma receita específica por ID**
+* **URL / Método:** `/recipes/:id` · `GET`
+* **Parâmetros de URL:** `id` (número/string, obrigatório)
+* **Resposta de Sucesso:** `200` `{"id": 1, "titulo": "Salada de Tomate", "instrucoes": "Cortar o tomate e temperar com azeite."}`
+* **Resposta de Erro:** `500` `{"msg": "Failed to get recipe", "error": "Descrição do erro da base de dados"}`
+
+**Obter todos os ingredientes**
+* **URL / Método:** `/ingredients` · `GET`
+* **Resposta de Sucesso:** `200` `[{"id": 1, "name": "Tomate"}, {"id": 2, "name": "Cebola"}]`
+* **Resposta de Erro:** `500` erro interno
+
+**Obter a lista de compras do utilizador**
+* **URL / Método:** `/shopping-list/:userId` · `GET`
+* **Parâmetros de URL:** `userId` (número/string, obrigatório)
+* **Resposta de Sucesso:** `200` `[{"id": 1, "name": "Tomate", "quantity": 3, "isChecked": false}]`
+* **Resposta de Erro:** `500` erro interno
+
+**Adicionar item à lista de compras**
+* **URL / Método:** `/shopping-list` · `POST`
+* **Parâmetros de Dados:** `id_utilizador`, `id_ingrediente`, `quantidade` (obrigatórios)
+* **Resposta de Sucesso:** `201` `{"id_item": 4, "message": "Item added"}`
+* **Resposta de Erro:** `400` campos em falta ou payload inválido · `500` erro interno
+
+**Limpar lista de compras do utilizador**
+* **URL / Método:** `/shopping-list/clear/:userId` · `DELETE`
+* **Parâmetros de URL:** `userId` (número/string, obrigatório)
+* **Resposta de Sucesso:** `200` `{"message": "Shopping list cleared"}`
+* **Resposta de Erro:** `500` erro interno
+
+**Atualizar um item (Quantidade ou Estado)**
+* **URL / Método:** `/shopping-list/:itemId` · `PATCH`
+* **Parâmetros de URL:** `itemId` (número/string, obrigatório)
+* **Parâmetros de Dados:** `quantidade`, `check_comprado` (opcionais)
+* **Resposta de Sucesso:** `200` `{"message": "Item updated"}`
+* **Resposta de Erro:** `500` erro interno
+
+**Eliminar item da lista de compras**
+* **URL / Método:** `/shopping-list/:itemId` · `DELETE`
+* **Parâmetros de URL:** `itemId` (número/string, obrigatório)
+* **Resposta de Sucesso:** `200` `{"message": "Item deleted"}`
+* **Resposta de Erro:** `500` erro interno
 
 ---
 
